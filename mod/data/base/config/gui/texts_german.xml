@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModOps>
+  <ModOp Add="//TextExport/Texts">
+    <Text><LineId>2110000001</LineId><Text>Roman Life - Albion</Text></Text>
+    <Text><LineId>2110000002</LineId><Text>Roman Life - Albion</Text></Text>
+    <Text><LineId>2110000003</LineId><Text>Roman Life - Albion</Text></Text>
+    <Text><LineId>2110000004</LineId><Text>Roman Life - Albion</Text></Text>
+    <Text><LineId>2110000005</LineId><Text>Roman Life - Albion</Text></Text>
+    <Text><LineId>2110000006</LineId><Text>Roman Life - Latium</Text></Text>
+    <Text><LineId>2110000007</LineId><Text>Roman Life - Latium</Text></Text>
+    <Text><LineId>2110000000</LineId><Text>Roman Life - Latium</Text></Text>
+    <Text><LineId>2110000008</LineId><Text>Roman Life - Latium</Text></Text>
+  </ModOp>
+</ModOps>
