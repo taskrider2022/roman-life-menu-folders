@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModOps>
+  <ModOp Add="//TextExport/Texts">
+    <Text><LineId>2110000001</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000002</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000003</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000004</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000005</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000006</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000007</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000000</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000008</LineId><Text>Roman Life</Text></Text>
+  </ModOp>
+  <ModOp Add="//TextExport/Texts" Condition="#rl-shared-khayi">
+    <Text><LineId>2110000100</LineId><Text>풍요로운 삶에 필요한 모든 것을 한곳에! 이 주민 계층에 맞는 Roman Life와 Imperial Blends의 건물과 생산 체인을 여기서 찾아보세요.</Text></Text>
+  </ModOp>
+  <ModOp Add="//TextExport/Texts" Condition="!#rl-shared-khayi">
+    <Text><LineId>2110000100</LineId><Text>풍요로운 삶에 필요한 모든 것을 한곳에! 이 주민 계층에 맞는 Roman Life의 건물과 생산 체인을 여기서 찾아보세요.</Text></Text>
+  </ModOp>
+</ModOps>

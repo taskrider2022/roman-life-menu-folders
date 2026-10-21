@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModOps>
+  <ModOp Add="//TextExport/Texts">
+    <Text><LineId>2110000001</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000002</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000003</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000004</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000005</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000006</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000007</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000000</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000008</LineId><Text>Roman Life</Text></Text>
+  </ModOp>
+  <ModOp Add="//TextExport/Texts" Condition="#rl-shared-khayi">
+    <Text><LineId>2110000100</LineId><Text>Tudo para uma boa vida: encontre aqui os edifícios e as cadeias de produção de Roman Life e Imperial Blends para este nível populacional, reunidos em um só lugar.</Text></Text>
+  </ModOp>
+  <ModOp Add="//TextExport/Texts" Condition="!#rl-shared-khayi">
+    <Text><LineId>2110000100</LineId><Text>Tudo para uma boa vida: encontre aqui os edifícios e as cadeias de produção de Roman Life para este nível populacional, reunidos em um só lugar.</Text></Text>
+  </ModOp>
+</ModOps>

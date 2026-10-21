@@ -2,6 +2,7 @@ import os, json, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from gather import data, MODS, SELF
 from analyze import info
+from localization import DESCRIPTION_ID, TITLE, TRANSLATIONS, IMPERIAL_MOD, description_without_imperial
 from collections import OrderedDict, defaultdict
 from xml.sax.saxutils import escape, quoteattr
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -11,8 +12,6 @@ if "--out" in sys.argv:
     OUT = sys.argv[sys.argv.index("--out") + 1]
 PRIO = ["latium", "albion", "imperial", "celtic", "other"]
 CAT_ORDER = ["Food", "Culture", "Fashion", "Household", "Wonder", None]
-NAMES = {"latium": "Roman Life - Latium", "albion": "Roman Life - Albion", "imperial": "Roman Life - Imperial",
-         "celtic": "Celtic Independence", "other": "Weitere Mods"}
 import guidrange
 FIRST_GUID = guidrange.FIRST_FOLDER_GUID  # (latium, 41364) takes the first GUID
 
@@ -86,6 +85,7 @@ for k in keys:
           <IconFilename>data/roman-life-menu-folders-gammelflei/ui/folder_{fam}.png</IconFilename>
         </Standard>
         <ConstructionCategory>
+          <CategoryDescription>{DESCRIPTION_ID}</CategoryDescription>
           <BuildingList></BuildingList>
         </ConstructionCategory>
         <Text>
@@ -117,10 +117,16 @@ exp = os.path.join(OUT, "data", "base", "config", "export")
 os.makedirs(exp, exist_ok=True)
 open(os.path.join(exp, "assets.xml"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
-texts = "\n".join(f"    <Text><LineId>{guid_of[k]}</LineId><Text>{NAMES[k[0]]}</Text></Text>" for k in keys)
-tx = f'<?xml version="1.0" encoding="utf-8"?>\n<ModOps>\n  <ModOp Add="//TextExport/Texts">\n{texts}\n  </ModOp>\n</ModOps>\n'
 gui = os.path.join(OUT, "data", "base", "config", "gui")
-for lang in ("english", "german"):
+for lang, (_, _, description, _) in TRANSLATIONS.items():
+    texts = "\n".join(f"    <Text><LineId>{guid_of[k]}</LineId><Text>{escape(TITLE)}</Text></Text>" for k in keys)
+    tx = f'<?xml version="1.0" encoding="utf-8"?>\n<ModOps>\n  <ModOp Add="//TextExport/Texts">\n{texts}\n  </ModOp>\n'
+    for condition, content in (
+        (f"#{IMPERIAL_MOD}", description),
+        (f"!#{IMPERIAL_MOD}", description_without_imperial(lang, description)),
+    ):
+        tx += f'  <ModOp Add="//TextExport/Texts" Condition="{condition}">\n    <Text><LineId>{DESCRIPTION_ID}</LineId><Text>{escape(content)}</Text></Text>\n  </ModOp>\n'
+    tx += "</ModOps>\n"
     open(os.path.join(gui, f"texts_{lang}.xml"), "w", encoding="utf-8").write(tx)
 
 mi = json.load(open(os.path.join(OUT, "modinfo.json"), encoding="utf-8"))
@@ -128,11 +134,8 @@ extra = {"rl-latium-khayi", "rl-albion-khayi", "rl-shared-khayi"}
 mi["Dependencies"]["LoadAfter"] = sorted(mods | extra)
 mi["Version"] = "0.5.0"
 mi["ModID"] = "roman-life-menu-folders-gammelflei"
-mi["ModName"] = {"English": "Roman Life Menu Folders", "German": "Roman Life Baumenü-Ordner"}
-mi["Description"] = {
-    "English": "Moves the Roman Life items (Latium, Albion, Imperial) out of the flat construction menu into one folder per population tier.",
-    "German": "Verschiebt die Roman-Life-Gebäude (Latium, Albion, Imperial) aus dem flachen Baumenü in je einen Ordner pro Bevölkerungsstufe.",
-}
+mi["ModName"] = {key: name for key, name, _, _ in TRANSLATIONS.values()}
+mi["Description"] = {key: description for key, _, _, description in TRANSLATIONS.values()}
 json.dump(mi, open(os.path.join(OUT, "modinfo.json"), "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
 # icons

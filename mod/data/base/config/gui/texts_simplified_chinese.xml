@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModOps>
+  <ModOp Add="//TextExport/Texts">
+    <Text><LineId>2110000001</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000002</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000003</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000004</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000005</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000006</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000007</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000000</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000008</LineId><Text>Roman Life</Text></Text>
+  </ModOp>
+  <ModOp Add="//TextExport/Texts" Condition="#rl-shared-khayi">
+    <Text><LineId>2110000100</LineId><Text>美好生活，尽在此处：这里汇集了 Roman Life 和 Imperial Blends 中适合当前人口阶层的建筑与生产链，方便你随时查找。</Text></Text>
+  </ModOp>
+  <ModOp Add="//TextExport/Texts" Condition="!#rl-shared-khayi">
+    <Text><LineId>2110000100</LineId><Text>美好生活，尽在此处：这里汇集了 Roman Life 中适合当前人口阶层的建筑与生产链，方便你随时查找。</Text></Text>
+  </ModOp>
+</ModOps>

@@ -17,6 +17,7 @@ GUI = MOD / "data/base/config/gui"
 sys.path.insert(0, str(ROOT / "tools"))
 import guidrange  # noqa: E402
 import package  # noqa: E402
+from localization import DESCRIPTION_ID, TITLE, TRANSLATIONS, IMPERIAL_MOD, description_without_imperial
 
 CATEGORIES = {"41327", "41328", "41329", "41330", "41331", "41362", "41363", "41364", "41365"}
 REQUIRED_LOAD_AFTER = {"rl-latium-khayi", "rl-albion-khayi", "rl-shared-khayi"}
@@ -113,13 +114,46 @@ class Assets(unittest.TestCase):
 
 
 class Texts(unittest.TestCase):
+    def test_all_twelve_languages_exist(self):
+        expected = {"brazilian", "english", "french", "german", "italian", "japanese",
+                    "korean", "polish", "russian", "simplified_chinese", "spanish",
+                    "traditional_chinese"}
+        self.assertEqual(set(TRANSLATIONS), expected)
+        self.assertEqual({p.stem.removeprefix("texts_") for p in GUI.glob("texts_*.xml")}, expected)
+
+    def test_every_folder_references_shared_description(self):
+        self.assertTrue(guidrange.RANGE_START <= DESCRIPTION_ID <= guidrange.RANGE_END)
+        self.assertNotIn(str(DESCRIPTION_ID), folder_guids())
+        for asset in folder_assets():
+            self.assertEqual(asset.findtext("Values/ConstructionCategory/CategoryDescription"), str(DESCRIPTION_ID))
+            self.assertIsNone(asset.find("Values/Standard/InfoDescription"))
+
+    def test_localized_metadata(self):
+        info = modinfo()
+        for key, name, _, description in TRANSLATIONS.values():
+            self.assertEqual(info["ModName"][key], name)
+            self.assertEqual(info["Description"][key], description)
+        self.assertEqual(info["ModName"]["English"], "Roman Life - Menu Folders")
+
     def test_every_folder_has_a_line_id(self):
-        for lang in ("english", "german"):
+        for lang, (_, _, description, _) in TRANSLATIONS.items():
             root = ET.parse(GUI / f"texts_{lang}.xml").getroot()
-            entries = [t for t in root.iter("Text") if t.find("LineId") is not None]
-            self.assertEqual({t.findtext("LineId") for t in entries}, folder_guids(), lang)
-            for t in entries:
-                self.assertTrue(t.findtext("Text"))
+            self.assertEqual({op.get("Condition") for op in root},
+                             {None, f"#{IMPERIAL_MOD}", f"!#{IMPERIAL_MOD}"})
+            for loaded in (False, True):
+                condition = f"#{IMPERIAL_MOD}" if loaded else f"!#{IMPERIAL_MOD}"
+                entries = [t for op in root if op.get("Condition") in (None, condition)
+                           for t in op.findall("Text")]
+                self.assertEqual(len(entries), len(folder_guids()) + 1, (lang, loaded))
+                self.assertEqual({t.findtext("LineId") for t in entries},
+                                 folder_guids() | {str(DESCRIPTION_ID)}, lang)
+                for t in entries:
+                    content = t.findtext("Text")
+                    if t.findtext("LineId") == str(DESCRIPTION_ID):
+                        self.assertEqual(content, description if loaded else description_without_imperial(lang, description))
+                        self.assertEqual("Imperial Blends" in content, loaded)
+                    else:
+                        self.assertEqual(content, TITLE)
 
 
 class GuidRange(unittest.TestCase):

@@ -144,11 +144,31 @@
   },
   "ModName": {
     "English": "Roman Life - Menu Folders",
-    "German": "Roman Life - Baumenü-Ordner"
+    "German": "Roman Life - Baumenü-Ordner",
+    "Brazilian": "Roman Life - Pastas do menu de construção",
+    "French": "Roman Life - Dossiers du menu de construction",
+    "Italian": "Roman Life - Cartelle del menu costruzioni",
+    "Spanish": "Roman Life - Carpetas del menú de construcción",
+    "Polish": "Roman Life - Foldery menu budowy",
+    "Russian": "Roman Life - Папки меню строительства",
+    "Japanese": "Roman Life - 建設メニューのフォルダー",
+    "Korean": "Roman Life - 건설 메뉴 폴더",
+    "Chinese": "Roman Life - 建造菜单文件夹",
+    "Taiwanese": "Roman Life - 建造選單資料夾"
   },
   "Description": {
-    "English": "Moves the Roman Life items (Latium, Albion, Imperial) out of the flat construction menu into one folder per population tier.",
-    "German": "Verschiebt die Roman-Life-Gebäude (Latium, Albion, Imperial) aus dem flachen Baumenü in je einen Ordner pro Bevölkerungsstufe."
+    "English": "Groups buildings from Roman Life - Latium, Albion and Imperial Blends into construction submenus for each population tier.",
+    "German": "Bündelt Gebäude aus Roman Life - Latium, Albion und Imperial Blends in Baumenü-Unterordnern je Bevölkerungsstufe.",
+    "Brazilian": "Agrupa edifícios de Roman Life - Latium, Albion e Imperial Blends em submenus de construção para cada nível populacional.",
+    "French": "Regroupe les bâtiments de Roman Life - Latium, Albion et Imperial Blends dans des sous-menus de construction pour chaque niveau de population.",
+    "Italian": "Raggruppa gli edifici di Roman Life - Latium, Albion e Imperial Blends in sottomenu di costruzione per ogni livello di popolazione.",
+    "Spanish": "Agrupa los edificios de Roman Life - Latium, Albion e Imperial Blends en submenús de construcción para cada nivel de población.",
+    "Polish": "Grupuje budynki z Roman Life - Latium, Albion i Imperial Blends w podmenu budowy dla każdego poziomu ludności.",
+    "Russian": "Объединяет здания из Roman Life - Latium, Albion и Imperial Blends в подменю строительства для каждого уровня населения.",
+    "Japanese": "Roman Life - Latium、Albion、Imperial Blendsの建物を、住民階級ごとの建設サブメニューにまとめます。",
+    "Korean": "Roman Life - Latium, Albion 및 Imperial Blends의 건물을 주민 계층별 건설 하위 메뉴로 묶습니다.",
+    "Chinese": "将 Roman Life - Latium、Albion 和 Imperial Blends 的建筑按人口阶层归入建造子菜单。",
+    "Taiwanese": "將 Roman Life - Latium、Albion 和 Imperial Blends 的建築按人口階層歸入建造子選單。"
   },
   "KnownIssues": [],
   "DLCDependencies": [],

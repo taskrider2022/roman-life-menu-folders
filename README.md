@@ -42,7 +42,8 @@ The tests prove the files are well-formed and consistent. They do not prove the 
 
 ## GUID range
 
-The mod uses the proposed range **2.110.000.000 - 2.110.000.999** (`tools/guidrange.py`), 9 folder GUIDs, reused as text LineIds.
+The mod uses the proposed range **2.110.000.000 - 2.110.000.999** (`tools/guidrange.py`),
+9 folder GUIDs reused as title LineIds, plus shared description LineId 2110000100.
 The registration for `gammelflei` is submitted in
 [GuidRanges PR #153](https://github.com/anno-mods/GuidRanges/pull/153).
 It is pending approval, not yet an accepted reservation.
@@ -75,6 +76,10 @@ If the range is taken by the time of the PR, change `RANGE_START`/`RANGE_END` in
 
 ## Notes
 
+- Tooltip text mentions Imperial Blends only when `#rl-shared-khayi` is loaded.
+  This checks the parent mod's presence, not which individual modules contribute
+  to a particular tab. Both condition branches are generated for all twelve languages.
+
 - Menu icons use the selected B badges: laurel/R for Latium and triskele for
   Albion. The detailed table illustrations remain on the cover images.
   Run `python tools/media.py` to rebuild icons, previews and the three title-image
@@ -87,7 +92,14 @@ If the range is taken by the time of the PR, change `RANGE_START`/`RANGE_END` in
   Sources are kept in `media/sources/`; the cover and preview are not shipped in the mod ZIP.
 
 - Load order: the mod must load after all Roman Life mods (`LoadAfter`), otherwise late insertions stay in the flat menu.
-- The German text file still contains English folder names.
+- Both regional tabs are titled "Roman Life", covering enabled modules including
+  Imperial Blends. `tools/localization.py` provides draft descriptions and mod
+  metadata for all twelve game languages. Native-speaker review is pending.
+- All tabs reference the shared description through
+  `ConstructionCategory/CategoryDescription`, defined as Text in the game's
+  `properties-meta.xml` and used by vanilla construction categories.
+  The earlier `Standard/InfoDescription` attempt did not display in game.
+  The corrected field still needs an in-game check in both regions.
 - The tier-to-category mapping and "Culture = Dienste" come from game data and are only tested in-game for Latium and Albion.
 
 ## Licensing
