@@ -8,9 +8,22 @@ from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 import icons
+from icon_concepts import badge
 
 
 class Images(unittest.TestCase):
+    def test_deployed_icons_use_selected_badges(self):
+        for region, motif in (("latium", "laurel"), ("albion", "triskele")):
+            emblem = badge(motif, region)
+            expected = icons.icon(emblem.crop(emblem.getbbox()))
+            with Image.open(icons.ICON_DIR / f"folder_{region}.png") as actual:
+                self.assertEqual(actual.tobytes(), expected.tobytes())
+
+    def test_cover_proposals_are_full_hd(self):
+        for name in ("a-dark", "b-parchment", "c-regional"):
+            with Image.open(ROOT / "media" / "cover-proposals" / f"{name}.png") as image:
+                self.assertEqual(image.size, (1920, 1080))
+
     def test_supplied_artwork_has_transparent_background_holes(self):
         for region, seeds in icons.BACKGROUND_SEEDS.items():
             result = icons.matte(icons.SOURCES / f"{region}.jpg")
@@ -59,6 +72,8 @@ class Images(unittest.TestCase):
     def test_cover_dimensions(self):
         with Image.open(ROOT / "media" / "modio-cover.png") as image:
             self.assertEqual(image.size, (1920, 1080))
+            with Image.open(ROOT / "media" / "cover-proposals" / "b-parchment.png") as selected:
+                self.assertEqual(image.tobytes(), selected.tobytes())
 
 
 if __name__ == "__main__":

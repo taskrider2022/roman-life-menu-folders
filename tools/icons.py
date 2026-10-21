@@ -79,10 +79,13 @@ def icon(image, size=512):
 
 
 def build(ui_dir):
+    from icon_concepts import badge
+
     ui_dir = Path(ui_dir)
     ui_dir.mkdir(parents=True, exist_ok=True)
-    for region in REGIONS:
-        icon(cutout(SOURCES / f"{region}.jpg")).save(ui_dir / f"folder_{region}.png")
+    for region, motif in zip(REGIONS, ("laurel", "triskele")):
+        emblem = badge(motif, region)
+        icon(emblem.crop(emblem.getbbox())).save(ui_dir / f"folder_{region}.png")
 
 
 if __name__ == "__main__":

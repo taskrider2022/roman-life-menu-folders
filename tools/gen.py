@@ -126,7 +126,7 @@ for lang in ("english", "german"):
 mi = json.load(open(os.path.join(OUT, "modinfo.json"), encoding="utf-8"))
 extra = {"rl-latium-khayi", "rl-albion-khayi", "rl-shared-khayi"}
 mi["Dependencies"]["LoadAfter"] = sorted(mods | extra)
-mi["Version"] = "0.4.0"
+mi["Version"] = "0.5.0"
 mi["ModID"] = "roman-life-menu-folders-gammelflei"
 mi["ModName"] = {"English": "Roman Life Menu Folders", "German": "Roman Life Baumenü-Ordner"}
 mi["Description"] = {

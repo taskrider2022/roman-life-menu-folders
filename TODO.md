@@ -7,11 +7,14 @@
 - [x] Create a 1920 x 1080 mod.io cover.
 - [x] Create a menu-size comparison at 128, 64, 48 and 32 pixels.
 - [ ] Review the icons in game: crowded motifs may lose detail at small sizes.
-- [x] Prepare three simplified badge concept pairs, including 48/36/28px comparisons
-  in `media/icon-concepts/comparison.png`; these do not replace the deployed icons.
-- [ ] Select badge motifs and refine the selected pair before installing them.
 - [ ] If necessary, agree on simplified crops with the developer.
-- [ ] Confirm artwork attribution and redistribution permission before publishing.
+- [x] Select and install simplified B badges: laurel/R for Latium and triskele
+  for Albion, with regional colors and a gold shield border.
+- [ ] Check the new B badges in game at the actual menu scale.
+- [x] Choose a title-image proposal from `media/cover-proposals/`: dark,
+  parchment or regional colors. All retain the supplied table illustrations.
+  Selected B (parchment); exported as `media/modio-cover.png`.
+- [x] Confirm artwork attribution and redistribution permission before publishing.
 
 ## Developer feedback: texts and tab behavior (next)
 
@@ -35,7 +38,6 @@
 - [ ] Review the cover and gallery screenshots with the developer.
 - [ ] Prepare final short and full mod.io descriptions, requirements,
   compatibility notes, credits and installation/update instructions.
-  Draft copy is saved in `media/modio-texts.md`.
 - [ ] Verify the status of GUID reservation PR #153 before claiming it is accepted:
   https://github.com/anno-mods/GuidRanges/pull/153
 - [ ] Confirm permissions for the supplied images; exclude them from the

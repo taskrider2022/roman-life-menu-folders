@@ -24,22 +24,9 @@ def centered(draw, text, y, size, fill):
 
 
 def cover():
-    image = Image.new("RGB", (1920, 1080))
-    draw = ImageDraw.Draw(image)
-    for y in range(1080):
-        t = y / 1079
-        draw.line((0, y, 1919, y), fill=tuple(round(a * (1 - t) + b * t) for a, b in zip((34, 46, 56), (13, 24, 30))))
-    gold = (209, 176, 112)
-    draw.rectangle((28, 28, 1891, 1051), outline=gold, width=2)
-    draw.line((280, 234, 1640, 234), fill=gold, width=2)
-    centered(draw, "ROMAN LIFE", 58, 90, (245, 230, 195))
-    centered(draw, "MENU FOLDERS", 161, 42, gold)
-    for region, cx in zip(REGIONS, (510, 1410)):
-        art = ImageOps.contain(cutout(SOURCES / f"{region}.jpg"), (740, 650), Image.Resampling.LANCZOS)
-        image.paste(art, (cx - art.width // 2, 284 + (650 - art.height) // 2), art)
-    centered(draw, "LATIUM  |  ALBION  |  IMPERIAL BLENDS", 956, 30, (235, 221, 194))
-    centered(draw, "Construction menu organization  |  by Gammelflei", 1008, 23, gold)
-    image.save(MEDIA / "modio-cover.png")
+    cover_proposals()
+    with Image.open(MEDIA / "cover-proposals" / "b-parchment.png") as image:
+        image.save(MEDIA / "modio-cover.png")
 
 
 def preview():
@@ -79,6 +66,42 @@ def detail_preview():
         image.paste(panel, (0, y))
         y += panel.height
     image.save(MEDIA / "cutout-detail-preview.png")
+
+
+def cover_proposals():
+    from icon_concepts import badge
+
+    destination = MEDIA / "cover-proposals"
+    destination.mkdir(parents=True, exist_ok=True)
+    palettes = (
+        ("a-dark", (31, 44, 54), (12, 25, 31), (244, 225, 185), (205, 170, 100)),
+        ("b-parchment", (242, 231, 203), (210, 189, 148), (84, 51, 31), (143, 100, 49)),
+        ("c-regional", (88, 47, 48), (30, 66, 58), (248, 231, 192), (214, 178, 108)),
+    )
+    thumbs = Image.new("RGB", (960, 3 * 580), (25, 33, 41))
+    for index, (name, top, bottom, ink, gold) in enumerate(palettes):
+        image = Image.new("RGB", (1920, 1080))
+        draw = ImageDraw.Draw(image)
+        for y in range(1080):
+            t = y / 1079
+            draw.line((0, y, 1919, y), fill=tuple(round(a * (1 - t) + b * t) for a, b in zip(top, bottom)))
+        draw.rectangle((28, 28, 1891, 1051), outline=gold, width=2)
+        # Offset lettering gives the title a restrained engraved look.
+        draw.text((960, 56), "ROMAN LIFE", font=font(102), anchor="mt", fill=gold)
+        centered(draw, "ROMAN LIFE", 53, 102, ink)
+        centered(draw, "MENU FOLDERS", 170, 44, gold)
+        draw.line((340, 239, 1580, 239), fill=gold, width=2)
+        for region, motif, cx in zip(REGIONS, ("laurel", "triskele"), (505, 1415)):
+            art = ImageOps.contain(cutout(SOURCES / f"{region}.jpg"), (720, 610), Image.Resampling.LANCZOS)
+            image.paste(art, (cx - art.width // 2, 295 + (610 - art.height) // 2), art)
+            emblem = badge(motif, region).resize((166, 166), Image.Resampling.LANCZOS)
+            image.paste(emblem, (cx - 83, 235), emblem)
+        centered(draw, "LATIUM  |  ALBION  |  IMPERIAL BLENDS", 948, 30, ink)
+        centered(draw, "Construction menu organization  |  by Gammelflei", 1003, 23, gold)
+        image.save(destination / f"{name}.png")
+        thumbs.paste(image.resize((960, 540), Image.Resampling.LANCZOS), (0, index * 580 + 40))
+        ImageDraw.Draw(thumbs).text((20, index * 580 + 8), name.upper(), font=font(22), fill=(238, 220, 182))
+    thumbs.save(destination / "comparison.png")
 
 
 if __name__ == "__main__":

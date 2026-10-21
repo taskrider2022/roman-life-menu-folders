@@ -75,6 +75,12 @@ If the range is taken by the time of the PR, change `RANGE_START`/`RANGE_END` in
 
 ## Notes
 
+- Menu icons use the selected B badges: laurel/R for Latium and triskele for
+  Albion. The detailed table illustrations remain on the cover images.
+  Run `python tools/media.py` to rebuild icons, previews and the three title-image
+  proposals in `media/cover-proposals/`. Original-mod covers are style references
+  only and are not composited into the images.
+
 - Release tasks and developer feedback are tracked in [TODO.md](TODO.md).
 - Run `python tools/media.py` to rebuild the supplied-artwork icons, the
   1920 x 1080 mod.io cover and the small-size comparison in `media/`.

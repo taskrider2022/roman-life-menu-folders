@@ -41,31 +41,31 @@ def symbol(name):
     elif name == "laurel":
         for side in (-1, 1):
             points = [(256 + side * x, y) for x, y in
-                      ((8, 396), (73, 362), (113, 308), (122, 243), (103, 180), (76, 141))]
-            d.line(points, fill=255, width=12, joint="curve")
-            for x, y, angle in ((67, 354, 35), (99, 314, 15),
-                                (118, 270, -5), (118, 222, -20), (98, 181, -35)):
+                      ((8, 378), (72, 347), (102, 296), (110, 239), (94, 184), (73, 151))]
+            d.line(points, fill=255, width=9, joint="curve")
+            for x, y, angle in ((64, 347, 35), (96, 304, 15),
+                                (110, 256, -5), (105, 210, -20), (84, 170, -35)):
                 for direction in (-1, 1):
                     leaf = Image.new("L", (100, 100))
-                    ImageDraw.Draw(leaf).ellipse((37, 10, 63, 86), fill=255)
+                    ImageDraw.Draw(leaf).ellipse((40, 23, 60, 77), fill=255)
                     leaf = leaf.rotate(side * angle + direction * 35, Image.Resampling.BICUBIC)
                     mask.paste(255, (int(256 + side * x + direction * 15 - 50), y - 50), leaf)
         d = ImageDraw.Draw(mask)
-        d.text((211, 207), "R", font=font(110), fill=255)
+        d.text((256, 271), "R", font=font(108), fill=255, anchor="mm")
     elif name == "triskele":
         for rotation in (0, 120, 240):
             pts = []
             for i in range(130):
                 t = i / 129
-                angle = math.radians(-140 + t * 360)
-                radius = 64 * (1 - t) + 6
-                x = 0 + radius * math.cos(angle)
-                y = -100 + radius * math.sin(angle)
+                angle = math.radians(90 + t * 330)
+                radius = 54 * (1 - t) + 8
+                x = radius * math.cos(angle)
+                y = -91 + radius * math.sin(angle)
                 a = math.radians(rotation)
                 pts.append((256 + x * math.cos(a) - y * math.sin(a),
                             256 + x * math.sin(a) + y * math.cos(a)))
-            d.line([(256, 256), *pts], fill=255, width=25, joint="curve")
-        d.ellipse((239, 239, 273, 273), fill=255)
+            d.line([(256, 256), *pts], fill=255, width=23, joint="curve")
+        d.ellipse((241, 241, 271, 271), fill=255)
     elif name == "amphora":
         d.ellipse((155, 168, 227, 283), outline=255, width=21)
         d.ellipse((285, 168, 357, 283), outline=255, width=21)
