@@ -62,6 +62,10 @@ If the range is taken by the time of the PR, change `RANGE_START`/`RANGE_END` in
 
 ## Releasing
 
+Publication-ready release notes in German and English are kept in
+[CHANGELOG.md](CHANGELOG.md). Before publishing, finalize the version's entry
+and replace its unreleased marker with the publication date.
+
 1. Bump `Version` (in `tools/gen.py`), regenerate, run the tests.
 2. Commit, tag `v<version>` (must equal `Version` in `mod/modinfo.json`), push the tag.
 3. CI creates a GitHub Release (pre-release) with the ZIP.
