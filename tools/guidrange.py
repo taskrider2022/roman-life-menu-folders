@@ -12,7 +12,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-USER = "taskr"
+USER = "gammelflei"
 RANGE_START = 2_110_000_000
 RANGE_END = 2_110_000_999
 SAFE_START, SAFE_END = 1_337_471_142, 2_147_483_647

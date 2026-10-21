@@ -20,7 +20,7 @@ tests/test_mod.py    static checks (XML, GUID range, LoadAfter, texts, icons, ZI
 
 ## Regenerating
 
-Needs Python 3 with `pillow` and `numpy` (`pip install pillow numpy`).
+Needs Python 3 with Pillow (`python -m pip install -r requirements.txt`).
 Run it after any Roman Life update that adds or moves menu items:
 
     python -X utf8 tools/gen.py --mods "D:\path\to\Anno 117 - Pax Romana\mods"
@@ -31,13 +31,21 @@ Run it after any Roman Life update that adds or moves menu items:
 ## Tests and ZIP
 
     python -m unittest discover -s tests -v
-    python tools/package.py          # writes dist/roman-life-menu-folders-taskr-<version>.zip
+    python tools/package.py          # writes dist/roman-life-menu-folders-gammelflei-<version>.zip
+
+The ZIP contains `[QoL] Roman Life Menu Folders (Gammelflei)/`.
+ModID: `roman-life-menu-folders-gammelflei`. Replace the previous installation,
+do not enable both ModIDs at the same time. Internal icons use
+`data/roman-life-menu-folders-gammelflei/ui/`.
 
 The tests prove the files are well-formed and consistent. They do not prove the game accepts the mod, see the checklist below.
 
 ## GUID range
 
-The mod uses **2.110.000.000 - 2.110.000.999** (`tools/guidrange.py`), 9 folder GUIDs, reused as text LineIds.
+The mod uses the proposed range **2.110.000.000 - 2.110.000.999** (`tools/guidrange.py`), 9 folder GUIDs, reused as text LineIds.
+The registration for `gammelflei` is submitted in
+[GuidRanges PR #153](https://github.com/anno-mods/GuidRanges/pull/153).
+It is pending approval, not yet an accepted reservation.
 
 Registration follows [anno-mods/GuidRanges](https://github.com/anno-mods/GuidRanges): fork it, add one row to the
 "Public GUID Ranges" table in `117/guids.md` (sorted by start ID), open a pull request. Discord is linked from that repo.
@@ -46,7 +54,7 @@ Local replay of that process (no push):
 
     git clone https://github.com/anno-mods/GuidRanges.git
     python tools/guidrange.py check GuidRanges    # safe range, size, overlap with every registered range
-    python tools/guidrange.py apply GuidRanges    # adds the row on branch add-taskr-range and commits it
+    python tools/guidrange.py apply GuidRanges    # adds the row on branch add-gammelflei-range and commits it
 
 `apply` prints the diff that would go into the pull request. The real PR still has to be opened from your own GitHub fork.
 If the range is taken by the time of the PR, change `RANGE_START`/`RANGE_END` in `tools/guidrange.py`, run `gen.py`, bump the version.
@@ -67,10 +75,19 @@ If the range is taken by the time of the PR, change `RANGE_START`/`RANGE_END` in
 
 ## Notes
 
+- Release tasks and developer feedback are tracked in [TODO.md](TODO.md).
+- Run `python tools/media.py` to rebuild the supplied-artwork icons, the
+  1920 x 1080 mod.io cover and the small-size comparison in `media/`.
+  Sources are kept in `media/sources/`; the cover and preview are not shipped in the mod ZIP.
+
 - Load order: the mod must load after all Roman Life mods (`LoadAfter`), otherwise late insertions stay in the flat menu.
 - The German text file still contains English folder names.
 - The tier-to-category mapping and "Culture = Dienste" come from game data and are only tested in-game for Latium and Albion.
 
 ## Licensing
 
-[MIT](LICENSE), including the icons. Roman Life files are not redistributed. Anno and its names belong to their respective owners.
+[MIT](LICENSE) for the project code. The developer-supplied artwork in
+`media/sources/` and images derived from it (including the menu icons) are
+excluded from this grant; confirm the rights holder's redistribution terms
+before publishing. Roman Life game-data files are not redistributed.
+Anno and its names belong to their respective owners.

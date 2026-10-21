@@ -83,7 +83,7 @@ for k in keys:
         <Standard>
           <GUID>{g}</GUID>
           <Name>MenuFolder_{fam}_{cat}</Name>
-          <IconFilename>data/roman-life-menu-folders-taskr/ui/folder_{fam}.png</IconFilename>
+          <IconFilename>data/roman-life-menu-folders-gammelflei/ui/folder_{fam}.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList></BuildingList>
@@ -127,7 +127,7 @@ mi = json.load(open(os.path.join(OUT, "modinfo.json"), encoding="utf-8"))
 extra = {"rl-latium-khayi", "rl-albion-khayi", "rl-shared-khayi"}
 mi["Dependencies"]["LoadAfter"] = sorted(mods | extra)
 mi["Version"] = "0.4.0"
-mi["ModID"] = "roman-life-menu-folders-taskr"
+mi["ModID"] = "roman-life-menu-folders-gammelflei"
 mi["ModName"] = {"English": "Roman Life Menu Folders", "German": "Roman Life Baumenü-Ordner"}
 mi["Description"] = {
     "English": "Moves the Roman Life items (Latium, Albion, Imperial) out of the flat construction menu into one folder per population tier.",
@@ -137,7 +137,7 @@ json.dump(mi, open(os.path.join(OUT, "modinfo.json"), "w", encoding="utf-8"), in
 
 # icons
 import icons
-icons.build(os.path.join(OUT, "data", "roman-life-menu-folders-taskr", "ui"))
+icons.build(os.path.join(OUT, "data", "roman-life-menu-folders-gammelflei", "ui"))
 
 tot = sum(len(v) for v in folders.values())
 print("folders", len(keys), "buildings", tot)

@@ -9,7 +9,7 @@
         <Standard>
           <GUID>2110000001</GUID>
           <Name>MenuFolder_albion_41327</Name>
-          <IconFilename>data/roman-life-menu-folders-taskr/ui/folder_albion.png</IconFilename>
+          <IconFilename>data/roman-life-menu-folders-gammelflei/ui/folder_albion.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList></BuildingList>
@@ -34,7 +34,7 @@
         <Standard>
           <GUID>2110000002</GUID>
           <Name>MenuFolder_albion_41328</Name>
-          <IconFilename>data/roman-life-menu-folders-taskr/ui/folder_albion.png</IconFilename>
+          <IconFilename>data/roman-life-menu-folders-gammelflei/ui/folder_albion.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList></BuildingList>
@@ -59,7 +59,7 @@
         <Standard>
           <GUID>2110000003</GUID>
           <Name>MenuFolder_albion_41329</Name>
-          <IconFilename>data/roman-life-menu-folders-taskr/ui/folder_albion.png</IconFilename>
+          <IconFilename>data/roman-life-menu-folders-gammelflei/ui/folder_albion.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList></BuildingList>
@@ -84,7 +84,7 @@
         <Standard>
           <GUID>2110000004</GUID>
           <Name>MenuFolder_albion_41330</Name>
-          <IconFilename>data/roman-life-menu-folders-taskr/ui/folder_albion.png</IconFilename>
+          <IconFilename>data/roman-life-menu-folders-gammelflei/ui/folder_albion.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList></BuildingList>
@@ -109,7 +109,7 @@
         <Standard>
           <GUID>2110000005</GUID>
           <Name>MenuFolder_albion_41331</Name>
-          <IconFilename>data/roman-life-menu-folders-taskr/ui/folder_albion.png</IconFilename>
+          <IconFilename>data/roman-life-menu-folders-gammelflei/ui/folder_albion.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList></BuildingList>
@@ -134,7 +134,7 @@
         <Standard>
           <GUID>2110000006</GUID>
           <Name>MenuFolder_latium_41362</Name>
-          <IconFilename>data/roman-life-menu-folders-taskr/ui/folder_latium.png</IconFilename>
+          <IconFilename>data/roman-life-menu-folders-gammelflei/ui/folder_latium.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList></BuildingList>
@@ -159,7 +159,7 @@
         <Standard>
           <GUID>2110000007</GUID>
           <Name>MenuFolder_latium_41363</Name>
-          <IconFilename>data/roman-life-menu-folders-taskr/ui/folder_latium.png</IconFilename>
+          <IconFilename>data/roman-life-menu-folders-gammelflei/ui/folder_latium.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList></BuildingList>
@@ -184,7 +184,7 @@
         <Standard>
           <GUID>2110000000</GUID>
           <Name>MenuFolder_latium_41364</Name>
-          <IconFilename>data/roman-life-menu-folders-taskr/ui/folder_latium.png</IconFilename>
+          <IconFilename>data/roman-life-menu-folders-gammelflei/ui/folder_latium.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList></BuildingList>
@@ -209,7 +209,7 @@
         <Standard>
           <GUID>2110000008</GUID>
           <Name>MenuFolder_latium_41365</Name>
-          <IconFilename>data/roman-life-menu-folders-taskr/ui/folder_latium.png</IconFilename>
+          <IconFilename>data/roman-life-menu-folders-gammelflei/ui/folder_latium.png</IconFilename>
         </Standard>
         <ConstructionCategory>
           <BuildingList></BuildingList>

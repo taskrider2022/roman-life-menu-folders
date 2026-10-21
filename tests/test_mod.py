@@ -20,7 +20,7 @@ import package  # noqa: E402
 
 CATEGORIES = {"41327", "41328", "41329", "41330", "41331", "41362", "41363", "41364", "41365"}
 REQUIRED_LOAD_AFTER = {"rl-latium-khayi", "rl-albion-khayi", "rl-shared-khayi"}
-ICON_DIR = MOD / "data/roman-life-menu-folders-taskr/ui"
+ICON_DIR = MOD / "data/roman-life-menu-folders-gammelflei/ui"
 
 
 def modinfo():
@@ -45,6 +45,7 @@ class ModInfo(unittest.TestCase):
         for key in ("Version", "Anno", "ModID", "Difficulty", "GameSetup", "Dependencies", "ModName", "Description"):
             self.assertIn(key, m)
         self.assertEqual(m["Anno"], 8)
+        self.assertEqual(m["ModID"], "roman-life-menu-folders-gammelflei")
         self.assertRegex(m["Version"], r"^\d+\.\d+\.\d+$")
         self.assertEqual(m["Difficulty"], "unchanged")
 
@@ -103,7 +104,9 @@ class Assets(unittest.TestCase):
                 self.assertNotIn("celtic", c)
 
     def test_icons_exist_and_are_referenced(self):
-        refs = set(re.findall(r"data/roman-life-menu-folders-taskr/ui/(folder_\w+\.png)", ASSETS.read_text(encoding="utf-8")))
+        self.assertFalse((MOD / "data/roman-life-menu-folders-taskr").exists())
+        self.assertNotIn("roman-life-menu-folders-taskr", ASSETS.read_text(encoding="utf-8"))
+        refs = set(re.findall(r"data/roman-life-menu-folders-gammelflei/ui/(folder_\w+\.png)", ASSETS.read_text(encoding="utf-8")))
         self.assertEqual(refs, {"folder_albion.png", "folder_latium.png"})
         for r in refs:
             self.assertTrue((ICON_DIR / r).is_file(), r)
@@ -125,7 +128,7 @@ class GuidRange(unittest.TestCase):
         self.assertLessEqual(guidrange.RANGE_END - guidrange.RANGE_START + 1, 100_000)
 
     def test_registry_row(self):
-        self.assertEqual(guidrange.our_row(), "| taskr           | 2.110.000.000 | 2.110.000.999 |")
+        self.assertEqual(guidrange.our_row(), "| gammelflei      | 2.110.000.000 | 2.110.000.999 |")
 
     def test_overlap_detected(self):
         table = "| someone | 2.109.999.000 | 2.110.000.100 |"
@@ -140,11 +143,14 @@ class Package(unittest.TestCase):
         with tempfile.TemporaryDirectory() as t:
             a = package.build(Path(t) / "a").read_bytes()
             out = package.build(Path(t) / "b")
+            self.assertEqual(out.name, f"roman-life-menu-folders-gammelflei-{modinfo()['Version']}.zip")
             self.assertEqual(a, out.read_bytes())
             with zipfile.ZipFile(out) as zf:
                 names = zf.namelist()
-            self.assertEqual({n.split("/")[0] for n in names}, {"[QoL] Roman Life Menu Folders"})
-            self.assertIn("[QoL] Roman Life Menu Folders/modinfo.json", names)
+            info = modinfo()
+            folder = f"[{info['Category']['English']}] {info['ModName']['English']} (Gammelflei)"
+            self.assertEqual({n.split("/")[0] for n in names}, {folder})
+            self.assertIn(f"{folder}/modinfo.json", names)
 
 
 if __name__ == "__main__":

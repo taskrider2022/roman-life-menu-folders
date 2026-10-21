@@ -1,7 +1,7 @@
 {
   "Version": "0.4.0",
   "Anno": 8,
-  "ModID": "roman-life-menu-folders-taskr",
+  "ModID": "roman-life-menu-folders-gammelflei",
   "Difficulty": "unchanged",
   "GameSetup": {
     "RequiresNewGame": false,
@@ -143,8 +143,8 @@
     "German": "QoL"
   },
   "ModName": {
-    "English": "Roman Life Menu Folders",
-    "German": "Roman Life Baumenü-Ordner"
+    "English": "Roman Life - Menu Folders",
+    "German": "Roman Life - Baumenü-Ordner"
   },
   "Description": {
     "English": "Moves the Roman Life items (Latium, Albion, Imperial) out of the flat construction menu into one folder per population tier.",
@@ -152,7 +152,7 @@
   },
   "KnownIssues": [],
   "DLCDependencies": [],
-  "CreatorName": "taskr",
+  "CreatorName": "gammelflei",
   "CreatorContact": "",
   "Image": null
 }

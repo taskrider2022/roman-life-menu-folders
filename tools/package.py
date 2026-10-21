@@ -15,7 +15,7 @@ FIXED_DATE = (1980, 1, 1, 0, 0, 0)
 
 def build(out_dir: Path = ROOT / "dist") -> Path:
     modinfo = json.loads((MOD_DIR / "modinfo.json").read_text(encoding="utf-8"))
-    folder = f"[{modinfo['Category']['English']}] {modinfo['ModName']['English']}"
+    folder = f"[{modinfo['Category']['English']}] {modinfo['ModName']['English']} (Gammelflei)"
     out_dir.mkdir(parents=True, exist_ok=True)
     out = out_dir / f"{modinfo['ModID']}-{modinfo['Version']}.zip"
     files = sorted(p for p in MOD_DIR.rglob("*") if p.is_file() and p.name != ".DS_Store")

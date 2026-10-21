@@ -7,7 +7,7 @@ _argv = sys.argv
 MODS = os.environ.get("ANNO_MODS", r"d:\Anno 117 - Pax Romana\mods")
 if "--mods" in _argv:
     MODS = _argv[_argv.index("--mods") + 1]
-SELF = "[QoL] Roman Life Menu Folders"
+SELF = "[QoL] Roman Life Menu Folders (Gammelflei)"
 CATS = {"41327", "41328", "41329", "41330", "41331", "41362", "41363", "41364", "41365"}
 FAMILIES = {
     "[Content] Roman Life - Latium (Khayi)": "latium",
