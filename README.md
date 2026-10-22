@@ -85,7 +85,11 @@ the entry and its upload date.
 - Check the [GUID reservation status](https://github.com/anno-mods/GuidRanges/pull/153).
 - Confirm the artwork attribution and redistribution terms before publishing.
 - Use [media/modio-cover.png](media/modio-cover.png) (1920 x 1080) as the cover.
-- Add in-game screenshots of both regions with the submenus open.
+- Gallery images with the submenus open:
+  [Latium](media/screenshots/menu-latium.png) and
+  [Albion](media/screenshots/menu-albion.png), each 1920 x 1080.
+  These are cropped game screenshots with a title overlay; originals are kept
+  in `media/sources/`.
 - For each ZIP, paste only that version's plain-text notes from
   [CHANGELOG.md](CHANGELOG.md), in the desired language.
 
