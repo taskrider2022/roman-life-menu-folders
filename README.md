@@ -40,6 +40,11 @@ do not enable both ModIDs at the same time. Internal icons use
 
 The tests prove the files are well-formed and consistent. They do not prove the game accepts the mod, see the checklist below.
 
+Approved menu icons are checked against pixel SHA-256 snapshots in
+`tests/test_images.py`, not regenerated for comparison: fonts and Pillow drawing
+can differ across platforms. Update those snapshots only after intentionally
+changing and visually approving the deployed icons.
+
 ## GUID range
 
 The mod uses the proposed range **2.110.000.000 - 2.110.000.999** (`tools/guidrange.py`),

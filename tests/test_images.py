@@ -1,3 +1,4 @@
+import hashlib
 import sys
 import tempfile
 import unittest
@@ -8,16 +9,19 @@ from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 import icons
-from icon_concepts import badge
 
 
 class Images(unittest.TestCase):
     def test_deployed_icons_use_selected_badges(self):
-        for region, motif in (("latium", "laurel"), ("albion", "triskele")):
-            emblem = badge(motif, region)
-            expected = icons.icon(emblem.crop(emblem.getbbox()))
-            with Image.open(icons.ICON_DIR / f"folder_{region}.png") as actual:
-                self.assertEqual(actual.tobytes(), expected.tobytes())
+        # Approved pixel snapshots, independent of renderer, font and PNG encoding.
+        approved = {
+            "latium": "6a73b4694357f29076040579a7752190158d202a2931454cd66a94cbc62e473f",
+            "albion": "08efe7d9f2432b07eb752d7bb3b3ddcfe32696fd830997cfc1440c71cbd992b9",
+        }
+        for region, expected in approved.items():
+            with self.subTest(region=region):
+                with Image.open(icons.ICON_DIR / f"folder_{region}.png") as actual:
+                    self.assertEqual(hashlib.sha256(actual.tobytes()).hexdigest(), expected)
 
     def test_cover_proposals_are_full_hd(self):
         for name in ("a-dark", "b-parchment", "c-regional"):
