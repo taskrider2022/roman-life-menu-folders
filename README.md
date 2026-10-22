@@ -62,14 +62,32 @@ If the range is taken by the time of the PR, change `RANGE_START`/`RANGE_END` in
 
 ## Releasing
 
-Publication-ready release notes in German and English are kept in
-[CHANGELOG.md](CHANGELOG.md). Before publishing, finalize the version's entry
-and replace its unreleased marker with the publication date.
+Plain-text release notes in German and English are kept in
+[CHANGELOG.md](CHANGELOG.md). Each uploaded ZIP has its own changelog on mod.io:
+copy only the notes for that version and the desired language, without Markdown
+formatting or earlier versions. The first upload (0.5.1) lists the full feature
+set; subsequent entries list only changes since the previous version, not the
+full feature set or internal documentation tasks. Before uploading, finalize
+the entry and its upload date.
 
 1. Bump `Version` (in `tools/gen.py`), regenerate, run the tests.
 2. Commit, tag `v<version>` (must equal `Version` in `mod/modinfo.json`), push the tag.
 3. CI creates a GitHub Release (pre-release) with the ZIP.
 4. mod.io upload is manual for now: create the mod page, upload `dist/*.zip`. The reference repo `loispostula/anno117-olive-oil-amphora` shows how to automate it (needs `MODIO_GAME_ID`, `MODIO_MOD_ID` variables and `MODIO_TOKEN`, `MODIO_DOMAIN` secrets).
+
+### mod.io publication checklist (internal)
+
+- Use the player-facing copy in [media/modio-texts.md](media/modio-texts.md);
+  do not include this checklist in the listing.
+- Review the listing before publishing. Tab titles, tooltips and localization
+  tasks are tracked in [TODO.md](TODO.md).
+- Verify the final ZIP in game.
+- Check the [GUID reservation status](https://github.com/anno-mods/GuidRanges/pull/153).
+- Confirm the artwork attribution and redistribution terms before publishing.
+- Use [media/modio-cover.png](media/modio-cover.png) (1920 x 1080) as the cover.
+- Add in-game screenshots of both regions with the submenus open.
+- For each ZIP, paste only that version's plain-text notes from
+  [CHANGELOG.md](CHANGELOG.md), in the desired language.
 
 ## In-game test checklist
 

@@ -1,4 +1,4 @@
-# mod.io listing draft / Entwurf für mod.io
+# mod.io listing / Beschreibung für mod.io
 
 ## Title / Titel
 
@@ -35,7 +35,14 @@ The number and contents of the folders depend on the enabled Roman Life modules.
 
 Extract the mod folder into the game's `mods` directory and enable it in the mod
 manager. Replace an older installation rather than enabling two copies.
-The mod's metadata specifies loading after the supported Roman Life modules.
+The loading order after the supported Roman Life modules is set automatically.
+
+### Using the menus
+
+Open the construction menu for the population tier you want in Latium or Albion.
+Select "Roman Life" to find the buildings from your enabled Roman Life modules.
+Look for the laurel wreath with R in Latium and the triskele in Albion.
+Choose a building inside the submenu and place it as usual.
 
 ### Credits
 
@@ -44,8 +51,6 @@ Menu organization by gammelflei. Roman Life content by
 This is an unofficial companion mod.
 
 The images used for this mod were generated using AI.
-
-Artwork attribution and redistribution terms must be confirmed before publishing.
 
 ## Kurzbeschreibung (Deutsch)
 
@@ -80,8 +85,15 @@ Anzahl und Inhalt der Untermenüs hängen von den aktivierten Roman-Life-Modulen
 
 Entpacke den Mod-Ordner in das Verzeichnis `mods` des Spiels und aktiviere die
 Mod im Mod-Manager. Ersetze bei einem Update die ältere Installation, statt
-zwei Kopien gleichzeitig zu aktivieren. Die Mod-Metadaten legen fest, dass
-diese Mod nach den unterstützten Roman-Life-Modulen geladen wird.
+zwei Kopien gleichzeitig zu aktivieren. Die Ladereihenfolge nach den
+unterstützten Roman-Life-Modulen ist automatisch festgelegt.
+
+### So benutzt du die Untermenüs
+
+Öffne in Latium oder Albion das Baumenü der gewünschten Bevölkerungsstufe.
+Unter „Roman Life“ findest du die Gebäude deiner aktivierten Roman-Life-Module.
+Du erkennst das Untermenü in Latium am Lorbeerkranz mit R und in Albion an der
+Triskele. Wähle darin ein Gebäude aus und platziere es wie gewohnt.
 
 ### Mitwirkende und Bildhinweis
 
@@ -90,26 +102,3 @@ Menüorganisation von gammelflei. Die Roman-Life-Inhalte stammen von
 Dies ist eine inoffizielle Begleitmod.
 
 Die für diese Mod verwendeten Bilder wurden mit KI erstellt.
-
-Urheberangaben und Bedingungen für die Weiterverbreitung des Bildmaterials
-müssen vor der Veröffentlichung bestätigt werden.
-
-## Release checks
-
-- Release notes: use the English entry for the version in [CHANGELOG.md](../CHANGELOG.md).
-- This is draft copy; review it with the developer before publishing.
-- Tab titles, tooltips and localization are tracked in ../TODO.md.
-- Verify the final ZIP in game.
-- Confirm GUID reservation status: https://github.com/anno-mods/GuidRanges/pull/153
-- Cover: modio-cover.png (1920 x 1080).
-- Add in-game screenshots showing both regions and the opened submenus.
-
-## Checkliste für die Veröffentlichung (Deutsch)
-
-- Änderungsnotizen: den deutschen Eintrag zur Version aus [CHANGELOG.md](../CHANGELOG.md) verwenden.
-- Dies ist ein Textentwurf; vor der Veröffentlichung mit dem Entwickler abstimmen.
-- Tab-Titel, Tooltips und Übersetzungen werden in [TODO.md](../TODO.md) nachgehalten.
-- Die fertige ZIP im Spiel testen.
-- Status der GUID-Reservierung prüfen: https://github.com/anno-mods/GuidRanges/pull/153
-- Titelbild: [modio-cover.png](modio-cover.png) (1920 x 1080).
-- Spiel-Screenshots beider Regionen mit geöffneten Untermenüs ergänzen.

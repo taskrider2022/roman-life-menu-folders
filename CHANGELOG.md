@@ -1,66 +1,37 @@
-# Changelog
+0.5.1 - 2026-10-22
 
-## 0.5.1 - Noch nicht veröffentlicht / Unreleased
+DEUTSCH
 
-### Deutsch
+Erste private Testversion
 
-- Vollständige deutsche Beschreibung für die mod.io-Veröffentlichung ergänzt.
-- Khayis mod.io-Profil in den Credits verlinkt und einen Hinweis auf die
-  KI-generierten Bilder ergänzt.
-- Zweisprachigen Changelog angelegt und in den Veröffentlichungsanleitungen
-  verlinkt.
-- Keine Änderungen am Spielverhalten gegenüber Version 0.5.0.
+Weniger scrollen, mehr bauen: Roman Life - Menu Folders bringt Ordnung in die Baumenüs von Latium und Albion.
 
-### English
+- Fasst die Gebäude und Produktionsketten aus Khayis Roman Life - Latium, Albion und Imperial Blends in eigenen Untermenüs zusammen.
+- Neun Untermenüs nach Bevölkerungsstufe: vier für Latium und fünf für Albion.
+- Sortiert die Gebäude innerhalb der Untermenüs nach Bedürfniskategorie und Freischaltvoraussetzungen.
+- Berücksichtigt die ursprünglichen Modul- und Kompatibilitätsbedingungen. Nur aktivierte Roman-Life-Module steuern Einträge bei; der Inhalt der Untermenüs hängt von deiner Mod-Auswahl ab.
+- Berücksichtigt bei der Ladereihenfolge die unterstützten Roman-Life-Module, damit auch deren später geladene Einträge einsortiert werden.
+- Einheitlicher Name "Roman Life" für alle Untermenüs.
+- Regionale Menüsymbole zur besseren Erkennung: Lorbeerkranz mit R für Latium und Triskele für Albion.
+- Beschreibungstexte erklären, was du in den Untermenüs findest. Imperial Blends wird nur erwähnt, wenn dessen übergeordnete Mod geladen ist.
+- Menübeschreibungen und Mod-Informationen für alle zwölf Spielsprachen. Die Übersetzungen sind noch nicht in allen Sprachen sprachlich geprüft.
+- Menüeinträge anderer Mods bleiben an ihrem bisherigen Platz.
+- Keine Änderungen an Produktionsrezepten, Bedürfnissen oder Balancing.
 
-- Added a complete German description for the mod.io listing.
-- Linked Khayi's mod.io profile in the credits and added an AI-generated
-  images disclosure.
-- Added a bilingual changelog and linked it from the publishing instructions.
-- No gameplay changes compared with version 0.5.0.
+ENGLISH
 
-## 0.5.0 - Noch nicht veröffentlicht / Unreleased
+First private test version
 
-### Deutsch
+Less scrolling, more building: Roman Life - Menu Folders organizes the construction menus in Latium and Albion.
 
-**Weniger scrollen, mehr bauen:** Roman Life bekommt übersichtliche Untermenüs
-für Latium und Albion.
-
-- Die Baumenü-Einträge aus Khayis Roman Life - Latium, Albion und Imperial Blends
-  werden in neun Untermenüs nach Bevölkerungsstufe zusammengefasst.
-- Innerhalb der Untermenüs sind die Einträge nach Bedürfniskategorie und
-  Freischaltvoraussetzungen sortiert.
-- Die ursprünglichen Modulbedingungen bleiben erhalten. Nur aktivierte
-  Roman-Life-Module steuern Einträge bei.
-- Die Ladereihenfolge berücksichtigt die unterstützten Roman-Life-Module,
-  damit auch später geladene Inhalte in den Untermenüs landen.
-- Alle Untermenüs tragen den Namen „Roman Life“. Regionale Wappen sorgen für
-  bessere Erkennbarkeit: Lorbeer mit R für Latium, Triskele für Albion.
-- Neue Beschreibungstexte erklären den Inhalt der Untermenüs. Imperial Blends
-  wird nur erwähnt, wenn dessen übergeordnete Mod geladen ist.
-- Menübeschreibungen und Mod-Metadaten liegen als Übersetzungsentwürfe für
-  alle zwölf Spielsprachen vor.
-- Die Menüeinträge anderer Mods bleiben unverändert. Produktionsrezepte,
-  Bedürfnisse und Balancing werden nicht verändert.
-
-### English
-
-**Less scrolling, more building:** Roman Life gets organized submenus for
-Latium and Albion.
-
-- Construction-menu entries from Khayi's Roman Life - Latium, Albion and
-  Imperial Blends are grouped into nine population-tier submenus.
-- Entries within each submenu are sorted by need category and unlock
-  requirements.
-- Original module conditions are preserved. Only enabled Roman Life modules
-  contribute entries.
-- The load order accounts for the supported Roman Life modules so that
-  late-loaded content is also included in the submenus.
-- All submenus are named "Roman Life". Regional badges improve recognition:
-  a laurel wreath with R for Latium and a triskele for Albion.
-- New descriptions explain the submenu contents. Imperial Blends is mentioned
-  only when its parent mod is loaded.
-- Menu descriptions and mod metadata include draft translations for all
-  twelve game languages.
-- Other mods' menu entries remain untouched. Production recipes, needs and
-  balancing are unchanged.
+- Groups buildings and production chains from Khayi's Roman Life - Latium, Albion and Imperial Blends into dedicated submenus.
+- Nine population-tier submenus: four for Latium and five for Albion.
+- Sorts buildings within each submenu by need category and unlock requirements.
+- Preserves the original module and compatibility conditions. Only enabled Roman Life modules contribute entries; submenu contents depend on your mod selection.
+- Accounts for the supported Roman Life modules in the load order so that their late-loaded entries are also included.
+- Uses the name "Roman Life" for all submenus.
+- Distinct regional menu icons: a laurel wreath with R for Latium and a triskele for Albion.
+- Descriptive tooltips explain the submenu contents. Imperial Blends is mentioned only when its parent mod is loaded.
+- Menu descriptions and mod information for all twelve game languages. Not all translations have been reviewed for language quality yet.
+- Other mods' menu entries stay in their original locations.
+- No changes to production recipes, needs or balancing.
