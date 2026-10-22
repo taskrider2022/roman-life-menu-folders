@@ -1,5 +1,13 @@
 # mod.io listing / Beschreibung für mod.io
 
+Für TinyMCE: die [gemeinsame Beschreibung](modio-description.html) im Browser
+öffnen und den gesamten angezeigten Inhalt formatiert kopieren und einfügen
+(nicht den HTML-Quelltext). Englisch steht zuerst, danach Deutsch; beide
+Sprachen kommen gemeinsam in dasselbe Beschreibungsfeld auf mod.io.
+Falls mod.io eine HTML-Quelltextansicht anbietet, dort nur den Inhalt zwischen
+`<body>` und `</body>` einfügen. Kurzbeschreibung und Titel separat übernehmen.
+Die Markdown-Fassung unten dient als Textreferenz, nicht zum direkten Einfügen.
+
 ## Title / Titel
 
 Roman Life - Menu Folders
@@ -16,6 +24,12 @@ Roman Life - Menu Folders groups the construction-menu entries from Khayi's
 Roman Life - Latium, Albion and Imperial Blends into dedicated submenus for
 each population tier.
 
+### The mods
+
+- [Roman Life - Latium for Anno 117: Pax Romana - mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-latium#description)
+- [Roman Life - Albion for Anno 117: Pax Romana - mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-albion#description)
+- [Roman Life - Imperial Blends for Anno 117: Pax Romana - mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-imperial-blends#description)
+
 ### Features
 
 - Dedicated Roman Life submenus for Latium and Albion.
@@ -31,24 +45,14 @@ Intended for use with Khayi's Roman Life mods. Only enabled modules contribute
 entries. This is a menu organizer, not a general compatibility patch for other mods.
 The number and contents of the folders depend on the enabled Roman Life modules.
 
-### Installation and updates
-
-Extract the mod folder into the game's `mods` directory and enable it in the mod
-manager. Replace an older installation rather than enabling two copies.
-The loading order after the supported Roman Life modules is set automatically.
-
-### Using the menus
-
-Open the construction menu for the population tier you want in Latium or Albion.
-Select "Roman Life" to find the buildings from your enabled Roman Life modules.
-Look for the laurel wreath with R in Latium and the triskele in Albion.
-Choose a building inside the submenu and place it as usual.
-
 ### Credits
 
 Menu organization by gammelflei. Roman Life content by
 [Khayi on mod.io](https://mod.io/g/anno-117-pax-romana/u/khayi).
 This is an unofficial companion mod.
+
+This mod is published with Khayi's agreement. Many thanks to Khayi, who also
+contributed artwork for the cover image.
 
 The images used for this mod were generated using AI.
 
@@ -64,6 +68,12 @@ Albion: weniger Scrollen im Baumenü, ohne Änderungen am Balancing.
 Roman Life - Menu Folders bringt mehr Übersicht in dein Baumenü: Die Einträge
 aus Khayis Roman Life - Latium, Albion und Imperial Blends werden in eigenen
 Untermenüs für die jeweilige Bevölkerungsstufe zusammengefasst.
+
+### Die Mods
+
+- [Roman Life - Latium für Anno 117: Pax Romana auf mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-latium#description)
+- [Roman Life - Albion für Anno 117: Pax Romana auf mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-albion#description)
+- [Roman Life - Imperial Blends für Anno 117: Pax Romana auf mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-imperial-blends#description)
 
 ### Funktionen
 
@@ -81,24 +91,13 @@ aktivierte Module steuern Einträge bei. Sie sorgt für Ordnung im Baumenü,
 ist aber kein allgemeiner Kompatibilitätspatch für andere Mods.
 Anzahl und Inhalt der Untermenüs hängen von den aktivierten Roman-Life-Modulen ab.
 
-### Installation und Updates
-
-Entpacke den Mod-Ordner in das Verzeichnis `mods` des Spiels und aktiviere die
-Mod im Mod-Manager. Ersetze bei einem Update die ältere Installation, statt
-zwei Kopien gleichzeitig zu aktivieren. Die Ladereihenfolge nach den
-unterstützten Roman-Life-Modulen ist automatisch festgelegt.
-
-### So benutzt du die Untermenüs
-
-Öffne in Latium oder Albion das Baumenü der gewünschten Bevölkerungsstufe.
-Unter „Roman Life“ findest du die Gebäude deiner aktivierten Roman-Life-Module.
-Du erkennst das Untermenü in Latium am Lorbeerkranz mit R und in Albion an der
-Triskele. Wähle darin ein Gebäude aus und platziere es wie gewohnt.
-
-### Mitwirkende und Bildhinweis
+### Mitwirkende
 
 Menüorganisation von gammelflei. Die Roman-Life-Inhalte stammen von
 [Khayi auf mod.io](https://mod.io/g/anno-117-pax-romana/u/khayi).
 Dies ist eine inoffizielle Begleitmod.
+
+Die Veröffentlichung dieser Mod ist mit Khayi abgesprochen. Vielen Dank an
+Khayi, der auch Grafiken für das Titelbild beigesteuert hat.
 
 Die für diese Mod verwendeten Bilder wurden mit KI erstellt.
