@@ -45,8 +45,11 @@
 - [x] Push local commits to GitHub and verify the tests and ZIP artifact in Actions.
   All 29 tests, ZIP build and artifact upload passed on Linux after making
   approved-icon checks independent of platform-specific rendering.
-- [ ] After release approval, create and push a matching version tag and verify
+- [x] After release approval, create and push a matching version tag and verify
   the GitHub Release. Tag pushes trigger the release workflow.
+  v0.5.1 pre-release created; tests, build and release upload succeeded.
+  Direct release ZIP downloaded and verified: 16 mod files, no nested ZIP.
+  https://github.com/taskrider2022/roman-life-menu-folders/releases/tag/v0.5.1
 - [ ] Review the cover and gallery screenshots with the developer.
   Cover approved; Latium and Albion gallery images created in media/screenshots/.
 - [x] Prepare final short and full mod.io descriptions, requirements,
