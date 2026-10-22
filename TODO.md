@@ -50,6 +50,7 @@
   v0.5.1 pre-release created; tests, build and release upload succeeded.
   Direct release ZIP downloaded and verified: 16 mod files, no nested ZIP.
   https://github.com/taskrider2022/roman-life-menu-folders/releases/tag/v0.5.1
+  Subsequently promoted to a regular release (verified 2026-10-22).
 - [ ] Review the cover and gallery screenshots with the developer.
   Cover approved; Latium and Albion gallery images created in media/screenshots/.
 - [x] Prepare final short and full mod.io descriptions, requirements,
@@ -64,7 +65,7 @@
   project's MIT grant unless the rights holder explicitly licenses them under MIT.
   Permission marked confirmed in the artwork checklist above; artwork remains
   excluded from the MIT grant.
-- [ ] Complete the in-game release checklist in README.md, including the new icons.
+- [ ] Complete the in-game release checklist in DEVELOPMENT.md, including the new icons.
 - [x] Bump release version, build the ZIP, inspect its contents and upload it.
   Version 0.5.1; ZIP contents verified. Uploaded privately to mod.io by the developer.
 - [ ] Configure optional automated mod.io uploads separately.
