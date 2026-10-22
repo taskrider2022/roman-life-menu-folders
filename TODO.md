@@ -1,6 +1,6 @@
 # Release TODO
 
-## Current priority: artwork
+## Artwork
 
 - [x] Preserve the developer-supplied Latium and Albion illustrations in `media/sources/`.
 - [x] Replace the previous icons with transparent PNGs made from these illustrations.
@@ -16,7 +16,7 @@
   Selected B (parchment); exported as `media/modio-cover.png`.
 - [x] Confirm artwork attribution and redistribution permission before publishing.
 
-## Developer feedback: texts and tab behavior (next)
+## Developer feedback: texts and tab behavior
 
 - [x] Use "Roman Life" for both regional tabs, including Imperial Blends content.
 - [x] Add a useful description/tooltip for each tab; verify which game field
@@ -39,18 +39,29 @@
 
 ## mod.io and release
 
-- [ ] Create or select the mod's GitHub repository and configure its remote.
-- [ ] Choose the default branch and align the CI branch filter (currently main).
-- [ ] Push local commits to GitHub and verify the tests and ZIP artifact in Actions.
+- [x] Create or select the mod's GitHub repository and configure its remote.
+  https://github.com/taskrider2022/roman-life-menu-folders (origin).
+- [x] Choose the default branch and align the CI branch filter: main.
+- [x] Push local commits to GitHub and verify the tests and ZIP artifact in Actions.
+  All 29 tests, ZIP build and artifact upload passed on Linux after making
+  approved-icon checks independent of platform-specific rendering.
 - [ ] After release approval, create and push a matching version tag and verify
   the GitHub Release. Tag pushes trigger the release workflow.
 - [ ] Review the cover and gallery screenshots with the developer.
-- [ ] Prepare final short and full mod.io descriptions, requirements,
+  Cover approved; Latium and Albion gallery images created in media/screenshots/.
+- [x] Prepare final short and full mod.io descriptions, requirements,
   compatibility notes, credits and installation/update instructions.
-- [ ] Verify the status of GUID reservation PR #153 before claiming it is accepted:
+  English and German player-facing copy in media/modio-texts.md; per-ZIP
+  plain-text release notes in CHANGELOG.md.
+- [x] Verify the status of GUID reservation PR #153 before claiming it is accepted:
   https://github.com/anno-mods/GuidRanges/pull/153
-- [ ] Confirm permissions for the supplied images; exclude them from the
+  Checked 2026-10-22: open, not merged. Do not claim the range is accepted.
+- [ ] Obtain acceptance of GUID reservation PR #153.
+- [x] Confirm permissions for the supplied images; exclude them from the
   project's MIT grant unless the rights holder explicitly licenses them under MIT.
+  Permission marked confirmed in the artwork checklist above; artwork remains
+  excluded from the MIT grant.
 - [ ] Complete the in-game release checklist in README.md, including the new icons.
-- [ ] Bump release version, build the ZIP, inspect its contents and upload it.
+- [x] Bump release version, build the ZIP, inspect its contents and upload it.
+  Version 0.5.1; ZIP contents verified. Uploaded privately to mod.io by the developer.
 - [ ] Configure optional automated mod.io uploads separately.
