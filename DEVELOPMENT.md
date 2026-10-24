@@ -12,6 +12,14 @@ Player-facing installation and usage instructions are in [README.md](README.md).
 
 ## Regenerating the mod
 
+Images and game binary formats are stored in Git LFS, including historical
+versions. Install Git LFS before cloning, then run `git lfs install` and
+`git lfs pull` in your checkout if needed. GitHub Actions checks out LFS content.
+Packaging and image tests require the actual files, not LFS pointers.
+Release ZIPs contain the real game files; players do not need Git LFS.
+After the historical migration, existing clones should be freshly cloned
+or carefully realigned with the rewritten history before pushing.
+
 Use Python 3.12, as in CI, and install the declared dependencies:
 
 ```powershell
