@@ -97,6 +97,11 @@ class Assets(unittest.TestCase):
             b = op.findtext("Item/Building")
             self.assertTrue(b and b.isdigit() and int(b) >= 1_000_000, b)
 
+    def test_pier_variants_are_paired(self):
+        text = ASSETS.read_text(encoding="utf-8")
+        self.assertEqual(text.count('Condition="#exotictradepier-khayi"'), text.count('Condition="!#exotictradepier-khayi"'))
+        self.assertIn("exotictradepier-khayi", modinfo()["Dependencies"]["LoadAfter"])
+
     def test_conditions_only_reference_mods_or_properties(self):
         for el in assets().iter():
             c = el.get("Condition")
