@@ -1,6 +1,6 @@
 import os, json, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from gather import data, MODS, SELF
+from gather import data, MODS, SELF, CATS
 from analyze import info
 from localization import DESCRIPTION_ID, TITLE, TRANSLATIONS, IMPERIAL_MOD, description_without_imperial
 from collections import OrderedDict, defaultdict
@@ -71,7 +71,7 @@ def wrap(conds, inner):
     return out
 
 import pier
-SWAPS, MOVES = pier.changes()
+SWAPS, MOVES = pier.changes(MODS, CATS)
 folder_of = {cat: guid_of[(fam, cat)] for fam, cat in keys}
 LIST = "/Values/ConstructionCategory/BuildingList"
 

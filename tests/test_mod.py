@@ -6,7 +6,6 @@ import re
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
 import xml.etree.ElementTree as ET
 import zipfile
 from pathlib import Path
@@ -84,15 +83,14 @@ class Pier(unittest.TestCase):
                 export = Path(tmp) / name / "data" / "base" / "config" / "export"
                 export.mkdir(parents=True)
                 (export / "assets.xml").write_text(xml, encoding="utf-8")
-                with patch.object(pier, "MODS", tmp):
-                    self.assertEqual(pier.changes(), (
-                        {"1556112020": ("41364", ["1556225730", "1556225731"])},
-                        {"1556033006": ("41364", "41363")},
-                    ))
+                self.assertEqual(pier.changes(tmp, CATEGORIES), (
+                    {"1556112020": ("41364", ["1556225730", "1556225731"])},
+                    {"1556033006": ("41364", "41363")},
+                ))
 
     def test_absent_optional_mod_has_no_changes(self):
-        with tempfile.TemporaryDirectory() as tmp, patch.object(pier, "MODS", tmp):
-            self.assertEqual(pier.changes(), ({}, {}))
+        with tempfile.TemporaryDirectory() as tmp:
+            self.assertEqual(pier.changes(tmp, CATEGORIES), ({}, {}))
 
 
 class Assets(unittest.TestCase):
