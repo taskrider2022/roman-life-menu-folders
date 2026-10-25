@@ -6,6 +6,7 @@ import re
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 import xml.etree.ElementTree as ET
 import zipfile
 from pathlib import Path
@@ -17,6 +18,7 @@ GUI = MOD / "data/base/config/gui"
 sys.path.insert(0, str(ROOT / "tools"))
 import guidrange  # noqa: E402
 import package  # noqa: E402
+import pier  # noqa: E402
 from localization import DESCRIPTION_ID, TITLE, TRANSLATIONS, IMPERIAL_MOD, description_without_imperial
 
 CATEGORIES = {"41327", "41328", "41329", "41330", "41331", "41362", "41363", "41364", "41365"}
@@ -63,6 +65,34 @@ class ModInfo(unittest.TestCase):
         d = modinfo()["Dependencies"]
         self.assertEqual(d.get("Require", []), [])
         self.assertEqual(d.get("Incompatible", []), [])
+
+
+class Pier(unittest.TestCase):
+    def test_supported_folder_names_preserve_swaps_and_moves(self):
+        xml = """<ModOps>
+          <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556112020']" />
+          <ModOp Type="addNextSibling" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556112020']">
+            <Item><Building>1556225730</Building></Item><Item><Building>1556225731</Building></Item>
+          </ModOp>
+          <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556033006']" />
+          <ModOp Type="addNextSibling" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='3615']">
+            <Item><Building>1556033006</Building></Item>
+          </ModOp>
+        </ModOps>"""
+        for name in pier.DIRS:
+            with self.subTest(folder=name), tempfile.TemporaryDirectory() as tmp:
+                export = Path(tmp) / name / "data" / "base" / "config" / "export"
+                export.mkdir(parents=True)
+                (export / "assets.xml").write_text(xml, encoding="utf-8")
+                with patch.object(pier, "MODS", tmp):
+                    self.assertEqual(pier.changes(), (
+                        {"1556112020": ("41364", ["1556225730", "1556225731"])},
+                        {"1556033006": ("41364", "41363")},
+                    ))
+
+    def test_absent_optional_mod_has_no_changes(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.object(pier, "MODS", tmp):
+            self.assertEqual(pier.changes(), ({}, {}))
 
 
 class Assets(unittest.TestCase):

@@ -3,15 +3,18 @@ import os, re
 from gather import MODS, CATS, load
 
 MOD = "exotictradepier-khayi"
-DIR = "[Gameplay] Exotic Trade Pier (Khayi)"
+DIRS = ("[Gameplay] Exotic Trade and Imperial Games (Khayi)", "[Gameplay] Exotic Trade Pier (Khayi)")
 TILE = re.compile(r"Item\[Building='(\d+)'\]$")
 
 
 def changes():
     """swaps {tile: (tab, [copies])}, moves {tile: (from tab, to tab)}, read from the installed pier."""
-    exp = os.path.join(MODS, DIR, "data", "base", "config", "export")
+    exp = next((os.path.join(MODS, d, "data", "base", "config", "export")
+                for d in DIRS if os.path.isdir(os.path.join(MODS, d))), None)
+    if exp is None:
+        return {}, {}
     ops = []
-    for f in sorted(os.listdir(exp)) if os.path.isdir(exp) else []:
+    for f in sorted(os.listdir(exp)):
         root = load(os.path.join(exp, f)) if f.endswith(".xml") else None
         for op in root.iter("ModOp") if root is not None else []:
             g, m = op.get("GUID", ""), TILE.search(op.get("Path", ""))

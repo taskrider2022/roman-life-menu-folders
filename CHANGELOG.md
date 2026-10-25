@@ -1,3 +1,22 @@
+0.5.2 - 2026-10-25
+
+DEUTSCH
+
+- Kompatibilität mit Exotic Trade and Imperial Games ergänzt: Alternative Rezeptketten für Roman-Life-Inhalte werden in die passenden Roman-Life-Untermenüs einsortiert.
+- Berücksichtigt die durch Exotic Trade geänderte Bevölkerungsstufe der Weihrauch-Kette.
+- Eigenständige Exotic-Trade-Einträge bleiben außerhalb der Roman-Life-Untermenüs.
+- Keine Änderungen an Forschung, Produktionsrezepten, Bedürfnissen oder Balancing.
+- Mit großem Dank an Khayi, der den Hauptteil dieser Kompatibilitätsarbeit übernommen hat; von uns stammen die ergänzenden Fixes.
+
+ENGLISH
+
+- Added compatibility with Exotic Trade and Imperial Games: alternative recipe chains for Roman Life content are grouped into the appropriate Roman Life submenus.
+- Respects the population-tier change made by Exotic Trade for the incense chain.
+- Standalone Exotic Trade entries remain outside the Roman Life submenus.
+- No changes to research, production recipes, needs or balancing.
+- With thanks to Khayi, who did most of this compatibility work; our contribution was the accompanying fixes.
+
+
 0.5.1 - 2026-10-22
 
 DEUTSCH

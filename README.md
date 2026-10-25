@@ -29,6 +29,9 @@ Python and the development tools are not needed to play.
 - Regional icons: laurel wreath with R for Latium, triskele for Albion.
 - Descriptive tooltips and localized mod information in all twelve game languages.
 - Respects the original Roman Life module conditions.
+- With Exotic Trade and Imperial Games, groups its alternative Roman Life
+  recipe chains into the matching folders and respects its incense tier change.
+  Standalone Exotic Trade entries stay outside these folders.
 - Leaves other mods' menu entries, production recipes, needs and balancing unchanged.
 
 ## Using the menus

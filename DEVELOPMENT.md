@@ -72,6 +72,8 @@ the icons. Font and Pillow differences can affect regenerated artwork.
   tiles the installed pier swaps for recipe copies or moves to another tier; each such entry gets a
   `!#exotictradepier-khayi` group (unchanged) and a `#exotictradepier-khayi` group that moves the
   pier's tiles into the folder instead.
+  Both folder names, `Exotic Trade and Imperial Games` and the older
+  `Exotic Trade Pier`, are supported; the current name takes precedence.
 - Tooltips use `ConstructionCategory/CategoryDescription`; display has been
   confirmed in both regions.
 - `tools/localization.py` provides twelve-language metadata and descriptions.
