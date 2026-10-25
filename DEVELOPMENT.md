@@ -68,6 +68,10 @@ the icons. Font and Pillow differences can affect regenerated artwork.
   checkout of `anno-mods/GuidRanges`.
 - `LoadAfter` covers the supported Roman Life modules so late insertions are
   included. Preserve upstream conditions when moving entries.
+- Exotic Trade Pier (`exotictradepier-khayi`, in `LoadAfter`): `tools/pier.py` reads which Roman Life
+  tiles the installed pier swaps for recipe copies or moves to another tier; each such entry gets a
+  `!#exotictradepier-khayi` group (unchanged) and a `#exotictradepier-khayi` group that moves the
+  pier's tiles into the folder instead.
 - Tooltips use `ConstructionCategory/CategoryDescription`; display has been
   confirmed in both regions.
 - `tools/localization.py` provides twelve-language metadata and descriptions.

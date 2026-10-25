@@ -256,9 +256,19 @@
     <ModOp Type="add" GUID="2110000001" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556199020</Building></Item></ModOp>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_signetrings">
-    <ModOp Type="remove" GUID="41327" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556113023']" />
-    <ModOp Type="remove" GUID="2110000001" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556113023']" />
-    <ModOp Type="add" GUID="2110000001" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556113023</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41327" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556113023']" />
+      <ModOp Type="remove" GUID="2110000001" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556113023']" />
+      <ModOp Type="add" GUID="2110000001" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556113023</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41327" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225790']" />
+      <ModOp Type="remove" GUID="2110000001" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225790']" />
+      <ModOp Type="add" GUID="2110000001" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225790</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41327" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225791']" />
+      <ModOp Type="remove" GUID="2110000001" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225791']" />
+      <ModOp Type="add" GUID="2110000001" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225791</Building></Item></ModOp>
+    </Group>
   </Group>
   <Group Condition="$rl-albion-khayi.rl_tinnedfacecream">
     <ModOp Type="remove" GUID="41327" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556200020']" />
@@ -441,9 +451,19 @@
     <ModOp Type="add" GUID="2110000004" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556169020</Building></Item></ModOp>
   </Group>
   <Group Condition="$rl-albion-khayi.rl_tabletwovenbraid">
-    <ModOp Type="remove" GUID="41330" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556175020']" />
-    <ModOp Type="remove" GUID="2110000004" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556175020']" />
-    <ModOp Type="add" GUID="2110000004" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556175020</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41330" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556175020']" />
+      <ModOp Type="remove" GUID="2110000004" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556175020']" />
+      <ModOp Type="add" GUID="2110000004" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556175020</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41330" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225760']" />
+      <ModOp Type="remove" GUID="2110000004" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225760']" />
+      <ModOp Type="add" GUID="2110000004" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225760</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41330" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225761']" />
+      <ModOp Type="remove" GUID="2110000004" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225761']" />
+      <ModOp Type="add" GUID="2110000004" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225761</Building></Item></ModOp>
+    </Group>
   </Group>
   <Group Condition="$rl-albion-khayi.rl_sapopomade">
     <ModOp Type="remove" GUID="41330" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556173020']" />
@@ -510,15 +530,15 @@
     <ModOp Type="add" GUID="2110000005" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556015006</Building></Item></ModOp>
   </Group>
   </Group>
-  <Group Condition="$rl-albion-khayi.rl_beavertailstew">
-    <ModOp Type="remove" GUID="41331" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556192020']" />
-    <ModOp Type="remove" GUID="2110000005" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556192020']" />
-    <ModOp Type="add" GUID="2110000005" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556192020</Building></Item></ModOp>
-  </Group>
   <Group Condition="$rl-albion-khayi.rl_crabfeast">
     <ModOp Type="remove" GUID="41331" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556191020']" />
     <ModOp Type="remove" GUID="2110000005" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556191020']" />
     <ModOp Type="add" GUID="2110000005" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556191020</Building></Item></ModOp>
+  </Group>
+  <Group Condition="$rl-albion-khayi.rl_beavertailstew">
+    <ModOp Type="remove" GUID="41331" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556192020']" />
+    <ModOp Type="remove" GUID="2110000005" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556192020']" />
+    <ModOp Type="add" GUID="2110000005" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556192020</Building></Item></ModOp>
   </Group>
   <Group Condition="$rl-albion-khayi.rl_ceremonialhelmets">
     <ModOp Type="remove" GUID="41331" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556193020']" />
@@ -597,14 +617,34 @@
     <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556080020</Building></Item></ModOp>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_roastlamb">
-    <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556078020']" />
-    <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556078020']" />
-    <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556078020</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556078020']" />
+      <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556078020']" />
+      <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556078020</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225620']" />
+      <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225620']" />
+      <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225620</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225621']" />
+      <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225621']" />
+      <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225621</Building></Item></ModOp>
+    </Group>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_ofellae">
-    <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556077020']" />
-    <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556077020']" />
-    <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556077020</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556077020']" />
+      <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556077020']" />
+      <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556077020</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225600']" />
+      <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225600']" />
+      <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225600</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225601']" />
+      <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225601']" />
+      <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225601</Building></Item></ModOp>
+    </Group>
   </Group>
   <Group Condition="$rl-shared-khayi.rl_moretum">
     <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556074020']" />
@@ -622,9 +662,19 @@
     <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556076020</Building></Item></ModOp>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_numidianchicken">
-    <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556079020']" />
-    <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556079020']" />
-    <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556079020</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556079020']" />
+      <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556079020']" />
+      <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556079020</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225610']" />
+      <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225610']" />
+      <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225610</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225611']" />
+      <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225611']" />
+      <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225611</Building></Item></ModOp>
+    </Group>
   </Group>
   <Group Condition="$rl-shared-khayi.rl_roastchestnuts">
     <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556081020']" />
@@ -745,9 +795,19 @@
     <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556102020</Building></Item></ModOp>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_grilledsalmon">
-    <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556105020']" />
-    <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556105020']" />
-    <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556105020</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556105020']" />
+      <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556105020']" />
+      <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556105020</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225630']" />
+      <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225630']" />
+      <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225630</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225631']" />
+      <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225631']" />
+      <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225631</Building></Item></ModOp>
+    </Group>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_citrons">
     <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556205010']" />
@@ -780,9 +840,19 @@
     <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556115020</Building></Item></ModOp>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_signetrings">
-    <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556113020']" />
-    <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556113020']" />
-    <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556113020</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556113020']" />
+      <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556113020']" />
+      <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556113020</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225780']" />
+      <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225780']" />
+      <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225780</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225781']" />
+      <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225781']" />
+      <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225781</Building></Item></ModOp>
+    </Group>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_coldcream">
     <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556114020']" />
@@ -800,9 +870,19 @@
     <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556118020</Building></Item></ModOp>
   </Group>
   <Group Condition="$rl-shared-khayi.rl_stolae">
-    <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556112020']" />
-    <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556112020']" />
-    <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556112020</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556112020']" />
+      <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556112020']" />
+      <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556112020</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225730']" />
+      <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225730']" />
+      <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225730</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225731']" />
+      <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225731']" />
+      <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225731</Building></Item></ModOp>
+    </Group>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_lapdogs">
     <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556130020']" />
@@ -818,9 +898,16 @@
   </Group>
   <Group Condition="$rl-latium-khayi.rl_sandaracincense">
   <Group Condition="!#sandaracincense-khayi">
-    <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556033006']" />
-    <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556033006']" />
-    <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556033006</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41364" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556033006']" />
+      <ModOp Type="remove" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556033006']" />
+      <ModOp Type="add" GUID="2110000000" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556033006</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41363" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556033006']" />
+      <ModOp Type="remove" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556033006']" />
+      <ModOp Type="add" GUID="2110000007" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556033006</Building></Item></ModOp>
+    </Group>
   </Group>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_theriac">
@@ -856,14 +943,34 @@
     <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556139010</Building></Item></ModOp>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_roastpeacock">
-    <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556131020']" />
-    <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556131020']" />
-    <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556131020</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556131020']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556131020']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556131020</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225640']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225640']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225640</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225641']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225641']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225641</Building></Item></ModOp>
+    </Group>
   </Group>
   <Group Condition="$rl-shared-khayi.rl_trojanpig">
-    <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556135020']" />
-    <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556135020']" />
-    <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556135020</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556135020']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556135020']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556135020</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225650']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225650']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225650</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225651']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225651']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225651</Building></Item></ModOp>
+    </Group>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_hamperna">
   <Group Condition="!#ham-perna-adam">
@@ -874,9 +981,19 @@
   </Group>
   <Group Condition="$rl-shared-khayi.rl_dormice">
   <Group Condition="!#dormice-khayi">
-    <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556009107']" />
-    <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556009107']" />
-    <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556009107</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556009107']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556009107']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556009107</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225660']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225660']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225660</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225661']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225661']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225661</Building></Item></ModOp>
+    </Group>
   </Group>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_litters">
@@ -885,9 +1002,19 @@
     <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556144020</Building></Item></ModOp>
   </Group>
   <Group Condition="$rl-latium-khayi.rl_cameos">
-    <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556142020']" />
-    <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556142020']" />
-    <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556142020</Building></Item></ModOp>
+    <Group Condition="!#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556142020']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556142020']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556142020</Building></Item></ModOp>
+    </Group>
+    <Group Condition="#exotictradepier-khayi">
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225770']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225770']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225770</Building></Item></ModOp>
+      <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225771']" />
+      <ModOp Type="remove" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556225771']" />
+      <ModOp Type="add" GUID="2110000008" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>1556225771</Building></Item></ModOp>
+    </Group>
   </Group>
   <Group Condition="$rl-shared-khayi.rl_medicaminafaciei">
     <ModOp Type="remove" GUID="41365" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1556138020']" />
