@@ -1,3 +1,14 @@
+0.6.1 - 2026-11-17
+
+DEUTSCH
+
+- Unnötige Remove-Operationen aus neuen Menüordnern entfernt, um Warnungen für noch nicht vorhandene Einträge zu vermeiden.
+
+ENGLISH
+
+- Removed redundant removals from new menu folders to avoid warnings for entries that are not present yet.
+
+
 0.6.0 - 2026-11-17
 
 DEUTSCH

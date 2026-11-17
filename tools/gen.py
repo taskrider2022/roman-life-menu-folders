@@ -82,7 +82,6 @@ LIST = "/Values/ConstructionCategory/BuildingList"
 
 def move(src, dst, b):
     return f'''      <ModOp Type="remove" GUID="{src}" Path="{LIST}/Item[Building='{b}']" />
-      <ModOp Type="remove" GUID="{dst}" Path="{LIST}/Item[Building='{b}']" />
       <ModOp Type="add" GUID="{dst}" Path="{LIST}"><Item><Building>{b}</Building></Item></ModOp>'''
 
 def with_pier(inner, cat, b):
@@ -139,7 +138,6 @@ for k in keys:
         variants_ = folders[k][b]
         for conds in variants_:
             inner = f'''    <ModOp Type="remove" GUID="{cat}" Path="/Values/ConstructionCategory/BuildingList/Item[Building='{b}']" />
-    <ModOp Type="remove" GUID="{g}" Path="/Values/ConstructionCategory/BuildingList/Item[Building='{b}']" />
     <ModOp Type="add" GUID="{g}" Path="/Values/ConstructionCategory/BuildingList"><Item><Building>{b}</Building></Item></ModOp>'''
             inner = with_pier(inner, cat, b)
             operation_conditions = list(conds)
@@ -170,7 +168,7 @@ extra = {
     "rl-aegyptus-khayi", "rl-base-aegyptus-khayi", pier.MOD,
 }
 mi["Dependencies"]["LoadAfter"] = sorted(mods | extra)
-mi["Version"] = "0.6.0"
+mi["Version"] = "0.6.1"
 mi["ModID"] = "roman-life-menu-folders-gammelflei"
 mi["ModName"] = {key: name for key, name, _, _ in TRANSLATIONS.values()}
 mi["Description"] = {key: description for key, _, _, description in TRANSLATIONS.values()}

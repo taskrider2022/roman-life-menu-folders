@@ -152,6 +152,19 @@ class Assets(unittest.TestCase):
             b = op.findtext("Item/Building")
             self.assertTrue(b and b.isdigit() and int(b) >= 1_000_000, b)
 
+    def test_buildings_are_added_once_per_folder_without_empty_folder_removes(self):
+        folders = folder_guids()
+        adds = [
+            (op.get("GUID"), op.findtext("Item/Building"))
+            for op in assets().iter("ModOp")
+            if op.get("Type") == "add" and op.get("GUID") in folders
+        ]
+        self.assertEqual(len(adds), len(set(adds)))
+        self.assertFalse(any(
+            op.get("Type") == "remove" and op.get("GUID") in folders
+            for op in assets().iter("ModOp")
+        ))
+
     def test_pier_variants_are_paired(self):
         text = ASSETS.read_text(encoding="utf-8")
         self.assertEqual(text.count('Condition="#exotictradepier-khayi"'), text.count('Condition="!#exotictradepier-khayi"'))
