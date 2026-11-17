@@ -5,7 +5,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageOps
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES = ROOT / "media" / "sources"
 ICON_DIR = ROOT / "mod" / "data" / "roman-life-menu-folders-gammelflei" / "ui"
-REGIONS = ("latium", "albion")
+REGIONS = ("latium", "albion", "aegyptus")
 BACKGROUND_SEEDS = {
     "latium": ((506, 139), (558, 149), (279, 190), (620, 241), (616, 252)),
     "albion": (
@@ -83,7 +83,7 @@ def build(ui_dir):
 
     ui_dir = Path(ui_dir)
     ui_dir.mkdir(parents=True, exist_ok=True)
-    for region, motif in zip(REGIONS, ("laurel", "triskele")):
+    for region, motif in zip(REGIONS, ("laurel", "triskele", "ankh")):
         emblem = badge(motif, region)
         icon(emblem.crop(emblem.getbbox())).save(ui_dir / f"folder_{region}.png")
 

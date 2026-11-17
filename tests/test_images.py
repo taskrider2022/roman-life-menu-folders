@@ -17,6 +17,7 @@ class Images(unittest.TestCase):
         approved = {
             "latium": "6a73b4694357f29076040579a7752190158d202a2931454cd66a94cbc62e473f",
             "albion": "08efe7d9f2432b07eb752d7bb3b3ddcfe32696fd830997cfc1440c71cbd992b9",
+            "aegyptus": "a68d60bf4175704ec8d4021a0898067acd810673597c4bb66f254fe34277d273",
         }
         for region, expected in approved.items():
             with self.subTest(region=region):
@@ -34,6 +35,13 @@ class Images(unittest.TestCase):
             for point in seeds:
                 with self.subTest(region=region, point=point):
                     self.assertLess(result.getpixel(point)[3], 25)
+
+    def test_aegyptus_source_is_square_and_cutout_ready(self):
+        path = icons.SOURCES / "aegyptus.png"
+        with Image.open(path) as source:
+            self.assertEqual(source.size, (1024, 1024))
+        alpha = icons.matte(path).getchannel("A")
+        self.assertEqual(alpha.getextrema(), (0, 255))
 
     def test_latium_white_details_survive_but_faded_wood_border_is_removed(self):
         result = icons.matte(icons.SOURCES / "latium.jpg")

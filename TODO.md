@@ -14,6 +14,8 @@
 - [x] Choose a title-image proposal from `media/cover-proposals/`: dark,
   parchment or regional colors. All retain the supplied table illustrations.
   Selected B (parchment); exported as `media/modio-cover.png`.
+- [ ] Review the Aegyptus title illustration and ankh menu badge before release;
+  confirm use of Roman Life Aegyptus icon motifs with Khayi.
 - [x] Confirm artwork attribution and redistribution permission before publishing.
 
 ## Developer feedback: texts and tab behavior

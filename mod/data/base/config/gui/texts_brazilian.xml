@@ -8,8 +8,13 @@
     <Text><LineId>2110000005</LineId><Text>Roman Life</Text></Text>
     <Text><LineId>2110000006</LineId><Text>Roman Life</Text></Text>
     <Text><LineId>2110000007</LineId><Text>Roman Life</Text></Text>
-    <Text><LineId>2110000000</LineId><Text>Roman Life</Text></Text>
     <Text><LineId>2110000008</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000009</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000010</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000011</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000012</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000000</LineId><Text>Roman Life</Text></Text>
+    <Text><LineId>2110000013</LineId><Text>Roman Life</Text></Text>
   </ModOp>
   <ModOp Add="//TextExport/Texts" Condition="#rl-shared-khayi">
     <Text><LineId>2110000100</LineId><Text>Tudo para uma boa vida: encontre aqui os edifícios e as cadeias de produção de Roman Life e Imperial Blends para este nível populacional, reunidos em um só lugar.</Text></Text>

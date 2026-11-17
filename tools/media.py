@@ -23,6 +23,14 @@ def centered(draw, text, y, size, fill):
     draw.text((960, y), text, font=font(size), fill=fill, anchor="mt")
 
 
+def source(region):
+    for suffix in (".jpg", ".png"):
+        path = SOURCES / f"{region}{suffix}"
+        if path.is_file():
+            return path
+    raise FileNotFoundError(f"No source illustration found for {region}")
+
+
 def cover():
     cover_proposals()
     with Image.open(MEDIA / "cover-proposals" / "b-parchment.png") as image:
@@ -30,7 +38,7 @@ def cover():
 
 
 def preview():
-    image = Image.new("RGB", (1080, 480), (36, 48, 64))
+    image = Image.new("RGB", (1080, 710), (36, 48, 64))
     draw = ImageDraw.Draw(image)
     for row, region in enumerate(REGIONS):
         draw.text((24, row * 230 + 16), region.upper(), font=font(21), fill=(240, 220, 182))
@@ -50,10 +58,11 @@ def detail_preview():
         ("latium", (100, 100, 640, 320)),
         ("albion", (220, 175, 590, 325)),
         ("albion", (75, 440, 535, 735)),
+        ("aegyptus", (80, 180, 680, 670)),
     )
     panels = []
     for region, box in regions:
-        art = matte(SOURCES / f"{region}.jpg").crop(box)
+        art = matte(source(region)).crop(box)
         row = Image.new("RGB", (art.width * 4, art.height * 2), (45, 45, 45))
         for index, color in enumerate(((20, 30, 40), (215, 215, 215))):
             background = Image.new("RGBA", art.size, color + (255,))
@@ -90,13 +99,13 @@ def cover_proposals():
         draw.text((960, 56), "ROMAN LIFE", font=font(102), anchor="mt", fill=gold)
         centered(draw, "ROMAN LIFE", 53, 102, ink)
         centered(draw, "MENU FOLDERS", 170, 44, gold)
-        draw.line((340, 239, 1580, 239), fill=gold, width=2)
-        for region, motif, cx in zip(REGIONS, ("laurel", "triskele"), (505, 1415)):
-            art = ImageOps.contain(cutout(SOURCES / f"{region}.jpg"), (720, 610), Image.Resampling.LANCZOS)
+        draw.line((260, 239, 1660, 239), fill=gold, width=2)
+        for region, motif, cx in zip(REGIONS, ("laurel", "triskele", "ankh"), (350, 960, 1570)):
+            art = ImageOps.contain(cutout(source(region)), (520, 610), Image.Resampling.LANCZOS)
             image.paste(art, (cx - art.width // 2, 295 + (610 - art.height) // 2), art)
             emblem = badge(motif, region).resize((166, 166), Image.Resampling.LANCZOS)
             image.paste(emblem, (cx - 83, 235), emblem)
-        centered(draw, "LATIUM  |  ALBION  |  IMPERIAL BLENDS", 948, 30, ink)
+        centered(draw, "LATIUM  |  ALBION  |  AEGYPTUS  |  IMPERIAL BLENDS", 948, 30, ink)
         centered(draw, "Construction menu organization  |  by Gammelflei", 1003, 23, gold)
         image.save(destination / f"{name}.png")
         thumbs.paste(image.resize((960, 540), Image.Resampling.LANCZOS), (0, index * 580 + 40))

@@ -20,8 +20,15 @@ import package  # noqa: E402
 import pier  # noqa: E402
 from localization import DESCRIPTION_ID, TITLE, TRANSLATIONS, IMPERIAL_MOD, description_without_imperial
 
-CATEGORIES = {"41327", "41328", "41329", "41330", "41331", "41362", "41363", "41364", "41365"}
-REQUIRED_LOAD_AFTER = {"rl-latium-khayi", "rl-albion-khayi", "rl-shared-khayi"}
+CATEGORIES = {
+    "41327", "41328", "41329", "41330", "41331", "41362", "41363", "41364", "41365",
+    "149688", "152078", "152079", "152081", "152083",
+}
+AEGYPTUS_CATEGORIES = {"149688", "152078", "152079", "152081", "152083"}
+REQUIRED_LOAD_AFTER = {
+    "rl-latium-khayi", "rl-albion-khayi", "rl-shared-khayi",
+    "rl-aegyptus-khayi", "rl-base-aegyptus-khayi",
+}
 ICON_DIR = MOD / "data/roman-life-menu-folders-gammelflei/ui"
 
 
@@ -103,7 +110,7 @@ class Assets(unittest.TestCase):
 
     def test_folder_guids_in_registered_range(self):
         folders = folder_assets()
-        self.assertEqual(len(folders), 9)
+        self.assertEqual(len(folders), 14)
         guids = [int(a.findtext("Values/Standard/GUID")) for a in folders]
         self.assertEqual(len(set(guids)), len(guids))
         for g in guids:
@@ -112,6 +119,26 @@ class Assets(unittest.TestCase):
     def test_folders_sit_next_to_known_categories(self):
         ops = [op for op in assets().iter("ModOp") if op.get("Type") == "addNextSibling" and op.find("Asset") is not None]
         self.assertEqual({op.get("GUID") for op in ops}, CATEGORIES)
+
+    def test_aegyptus_menu_ops_are_guarded_by_its_base_module(self):
+        guarded = {
+            op.get("GUID")
+            for group in assets().iter("Group")
+            if group.get("Condition") == "#rl-base-aegyptus-khayi"
+            for op in group.iter("ModOp")
+        }
+        self.assertTrue(AEGYPTUS_CATEGORIES <= guarded)
+
+    def test_aegyptus_cross_module_conditions_are_preserved(self):
+        text = ASSETS.read_text(encoding="utf-8")
+        for condition in (
+            "$rl-latium-khayi.rl_bathkits",
+            "$rl-latium-khayi.rl_epityrum",
+            "$rl-latium-khayi.rl_toothpowder",
+            "$rl-shared-khayi.rl_moretum",
+        ):
+            with self.subTest(condition=condition):
+                self.assertIn(f'Condition="{condition}"', text)
 
     def test_folder_entry_added_to_each_category(self):
         added = {op.findtext("Item/Building") for op in assets().iter("ModOp")
@@ -141,7 +168,7 @@ class Assets(unittest.TestCase):
         self.assertFalse((MOD / "data/roman-life-menu-folders-taskr").exists())
         self.assertNotIn("roman-life-menu-folders-taskr", ASSETS.read_text(encoding="utf-8"))
         refs = set(re.findall(r"data/roman-life-menu-folders-gammelflei/ui/(folder_\w+\.png)", ASSETS.read_text(encoding="utf-8")))
-        self.assertEqual(refs, {"folder_albion.png", "folder_latium.png"})
+        self.assertEqual(refs, {"folder_albion.png", "folder_latium.png", "folder_aegyptus.png"})
         for r in refs:
             self.assertTrue((ICON_DIR / r).is_file(), r)
 

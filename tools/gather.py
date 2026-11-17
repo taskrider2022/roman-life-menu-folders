@@ -8,11 +8,13 @@ MODS = os.environ.get("ANNO_MODS", r"d:\Anno 117 - Pax Romana\mods")
 if "--mods" in _argv:
     MODS = _argv[_argv.index("--mods") + 1]
 SELF = "[QoL] Roman Life Menu Folders (Gammelflei)"
-CATS = {"41327", "41328", "41329", "41330", "41331", "41362", "41363", "41364", "41365"}
+AEGYPTUS_CATS = {"149688", "152078", "152079", "152081", "152083"}
+CATS = {"41327", "41328", "41329", "41330", "41331", "41362", "41363", "41364", "41365"} | AEGYPTUS_CATS
 FAMILIES = {
     "[Content] Roman Life - Latium (Khayi)": "latium",
     "[Content] Roman Life - Albion (Khayi)": "albion",
     "[Content] Roman Life - Imperial Blends (Khayi)": "imperial",
+    "[Content] Roman Life - Aegyptus (Khayi)": "aegyptus",
     "[Gameplay] Celtic Independence Overhaul (Jtmzac)": "celtic",
 }
 

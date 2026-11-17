@@ -14,25 +14,27 @@ Roman Life - Menu Folders
 
 ## Short description (English)
 
-Organizes Roman Life buildings into population-tier submenus for Latium and Albion, reducing construction-menu clutter without changing gameplay.
+Organizes Roman Life buildings into population-tier submenus for Latium, Albion and Aegyptus, reducing construction-menu clutter without changing gameplay.
 
 ## Full description (English)
 
 **Less scrolling, more building.**
 
 Roman Life - Menu Folders groups the construction-menu entries from Khayi's
-Roman Life - Latium, Albion and Imperial Blends into dedicated submenus for
-each population tier.
+Roman Life - Latium, Albion, Aegyptus and Imperial Blends into dedicated
+submenus for each population tier.
 
 ### The mods
 
 - [Roman Life - Latium for Anno 117: Pax Romana - mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-latium#description)
 - [Roman Life - Albion for Anno 117: Pax Romana - mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-albion#description)
 - [Roman Life - Imperial Blends for Anno 117: Pax Romana - mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-imperial-blends#description)
+- Roman Life - Aegyptus (requires DLC 3)
 
 ### Features
 
-- Dedicated Roman Life submenus for Latium and Albion.
+- Dedicated Roman Life submenus for Latium, Albion and Aegyptus.
+- Five Aegyptus submenus for DLC 3 construction categories.
 - Entries ordered by need category and unlock requirements.
 - Two regional menu icons.
 - Respects the original Roman Life module conditions.
@@ -42,7 +44,8 @@ each population tier.
 ### Requirements and compatibility
 
 Intended for use with Khayi's Roman Life mods. Only enabled modules contribute
-entries. This is a menu organizer, not a general compatibility patch for other mods.
+entries. Aegyptus folders require DLC 3 and the Roman Life Aegyptus base module.
+This is a menu organizer, not a general compatibility patch for other mods.
 The number and contents of the folders depend on the enabled Roman Life modules.
 
 ### Credits
@@ -58,26 +61,28 @@ The images used for this mod were generated using AI.
 
 ## Kurzbeschreibung (Deutsch)
 
-Sortiert Roman-Life-Gebäude in Untermenüs je Bevölkerungsstufe in Latium und
-Albion: weniger Scrollen im Baumenü, ohne Änderungen am Balancing.
+Sortiert Roman-Life-Gebäude in Untermenüs je Bevölkerungsstufe in Latium,
+Albion und Aegyptus: weniger Scrollen im Baumenü, ohne Änderungen am Balancing.
 
 ## Vollständige Beschreibung (Deutsch)
 
 **Weniger scrollen, mehr bauen.**
 
 Roman Life - Menu Folders bringt mehr Übersicht in dein Baumenü: Die Einträge
-aus Khayis Roman Life - Latium, Albion und Imperial Blends werden in eigenen
-Untermenüs für die jeweilige Bevölkerungsstufe zusammengefasst.
+aus Khayis Roman Life - Latium, Albion, Aegyptus und Imperial Blends werden in
+eigenen Untermenüs für die jeweilige Bevölkerungsstufe zusammengefasst.
 
 ### Die Mods
 
 - [Roman Life - Latium für Anno 117: Pax Romana auf mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-latium#description)
 - [Roman Life - Albion für Anno 117: Pax Romana auf mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-albion#description)
 - [Roman Life - Imperial Blends für Anno 117: Pax Romana auf mod.io](https://mod.io/g/anno-117-pax-romana/m/roman-life-imperial-blends#description)
+- Roman Life - Aegyptus (benötigt DLC 3)
 
 ### Funktionen
 
-- Eigene Roman-Life-Untermenüs für Latium und Albion.
+- Eigene Roman-Life-Untermenüs für Latium, Albion und Aegyptus.
+- Fünf Aegyptus-Untermenüs für Baumenü-Kategorien aus DLC 3.
 - Einträge nach Bedürfniskategorie und Freischaltvoraussetzungen sortiert.
 - Zwei regionale Menüsymbole.
 - Berücksichtigt die ursprünglichen Bedingungen der Roman-Life-Module.
@@ -87,7 +92,8 @@ Untermenüs für die jeweilige Bevölkerungsstufe zusammengefasst.
 ### Voraussetzungen und Kompatibilität
 
 Diese Mod ist für die Verwendung mit Khayis Roman-Life-Mods gedacht. Nur
-aktivierte Module steuern Einträge bei. Sie sorgt für Ordnung im Baumenü,
+aktivierte Module steuern Einträge bei. Aegyptus-Untermenüs benötigen DLC 3
+und das Roman-Life-Aegyptus-Basismodul. Sie sorgt für Ordnung im Baumenü,
 ist aber kein allgemeiner Kompatibilitätspatch für andere Mods.
 Anzahl und Inhalt der Untermenüs hängen von den aktivierten Roman-Life-Modulen ab.
 

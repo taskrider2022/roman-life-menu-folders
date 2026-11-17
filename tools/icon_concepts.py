@@ -66,6 +66,10 @@ def symbol(name):
                             256 + x * math.sin(a) + y * math.cos(a)))
             d.line([(256, 256), *pts], fill=255, width=23, joint="curve")
         d.ellipse((241, 241, 271, 271), fill=255)
+    elif name == "ankh":
+        with Image.open(ROOT / "media" / "sources" / "ankh-mask.png") as source:
+            shape = source.convert("L").resize((222, 332), Image.Resampling.LANCZOS)
+        mask.paste(shape, (145, 82))
     elif name == "amphora":
         d.ellipse((155, 168, 227, 283), outline=255, width=21)
         d.ellipse((285, 168, 357, 283), outline=255, width=21)
@@ -102,8 +106,12 @@ def badge(name, region):
     shield = [(66, 92), (256, 54), (446, 92), (431, 362), (256, 458), (81, 362)]
     d.polygon(shield, fill=(34, 41, 46), outline=(170, 140, 77), width=13)
     inner = [(87, 110), (256, 76), (425, 110), (411, 349), (256, 432), (101, 349)]
-    d.polygon(inner, fill=(75, 40, 43) if region == "latium" else (34, 65, 59),
-              outline=(92, 80, 54), width=5)
+    palette = {
+        "latium": (75, 40, 43),
+        "albion": (34, 65, 59),
+        "aegyptus": (29, 57, 55),
+    }
+    d.polygon(inner, fill=palette[region], outline=(92, 80, 54), width=5)
     mask = symbol(name)
     shadow = Image.new("RGBA", (S, S))
     shadow.paste((9, 13, 18, 220), (0, 0, S, S), mask.filter(ImageFilter.GaussianBlur(6)))

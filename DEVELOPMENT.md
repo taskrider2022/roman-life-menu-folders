@@ -66,8 +66,13 @@ the icons. Font and Pillow differences can affect regenerated artwork.
   is open, not accepted (checked 2026-10-22).
 - `tools/guidrange.py` maintains the allocation and can check it against a local
   checkout of `anno-mods/GuidRanges`.
-- `LoadAfter` covers the supported Roman Life modules so late insertions are
-  included. Preserve upstream conditions when moving entries.
+- `LoadAfter` covers the supported Latium, Albion, Imperial Blends and
+  Aegyptus modules so late insertions are included. Preserve upstream
+  conditions when moving entries.
+- Aegyptus contributes entries to five DLC 3 construction categories
+  (149688, 152078, 152079, 152081 and 152083). Those folder and move operations
+  are guarded by `#rl-base-aegyptus-khayi`; each source module's own conditions
+  remain nested inside that guard.
 - Exotic Trade Pier (`exotictradepier-khayi`, in `LoadAfter`): `tools/pier.py` reads which Roman Life
   tiles the installed pier swaps for recipe copies or moves to another tier; each such entry gets a
   `!#exotictradepier-khayi` group (unchanged) and a `#exotictradepier-khayi` group that moves the
@@ -88,6 +93,9 @@ the icons. Font and Pillow differences can affect regenerated artwork.
 - Latium: folders appear for all four tiers; entries follow need and unlock order.
 - Albion: folders appear for all five supported tiers, including Roman Way tiers;
   enabled Roman Life and Imperial Blends entries are inside.
+- Aegyptus: all five folders appear with the Aegyptus base module and DLC 3;
+  enabled Aegyptus content and cross-module Latium/Imperial conditions are
+  preserved.
 - Other mods' entries remain where their own mods place them.
 - Check tooltip wording with and without Imperial Blends.
 - Check removal mid-save: the save loads and entries return to the original menu

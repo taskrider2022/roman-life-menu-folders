@@ -3,8 +3,8 @@
 **Less scrolling, more building.**
 
 A construction-menu organizer for Anno 117: Pax Romana and Khayi's Roman Life
-mods. Buildings from Roman Life - Latium, Albion and Imperial Blends are grouped
-into submenus for each population tier, without changing gameplay.
+mods. Buildings from Roman Life - Latium, Albion, Aegyptus and Imperial Blends
+are grouped into submenus for each population tier, without changing gameplay.
 
 ![Roman Life - Menu Folders](media/modio-cover.png)
 
@@ -24,9 +24,11 @@ Python and the development tools are not needed to play.
 
 ## What it does
 
-- Nine population-tier submenus: four for Latium and five for Albion.
+- Fourteen population-tier submenus: four for Latium, five for Albion and five
+  for Aegyptus (DLC 3).
 - Buildings sorted by need category and unlock requirements.
-- Regional icons: laurel wreath with R for Latium, triskele for Albion.
+- Regional icons: laurel wreath with R for Latium, triskele for Albion and a
+  solid gold ankh emblem for Aegyptus.
 - Descriptive tooltips and localized mod information in all twelve game languages.
 - Respects the original Roman Life module conditions.
 - With Exotic Trade and Imperial Games, groups its alternative Roman Life
@@ -39,8 +41,10 @@ Python and the development tools are not needed to play.
 Open the construction menu for the population tier you want and select
 **Roman Life**. Choose a building inside the submenu and place it as usual.
 
-The available buildings depend on your enabled Roman Life modules. This mod
-organizes existing content; it does not add the Roman Life buildings itself.
+The available buildings depend on your enabled Roman Life modules and DLCs.
+The Aegyptus folders appear with the Roman Life Aegyptus base module and DLC 3.
+This mod organizes existing content; it does not add the Roman Life buildings
+itself.
 It is not a general compatibility patch for other mods.
 The load order after supported Roman Life modules is specified automatically.
 

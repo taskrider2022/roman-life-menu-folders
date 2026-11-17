@@ -1,3 +1,20 @@
+0.6.0 - 2026-11-17
+
+DEUTSCH
+
+- Fünf Aegyptus-Untermenüs für Roman Life Aegyptus und DLC 3 ergänzt.
+- Neue goldene Ankh-Menümarke und Aegyptus-Titelbild in die mod.io-Coverentwürfe aufgenommen.
+- Bedingungen der Aegyptus- und abhängigen Roman-Life-Module bleiben erhalten.
+- Ladefolge für das Aegyptus-Basismodul und Roman Life Aegyptus ergänzt.
+
+ENGLISH
+
+- Added five Aegyptus submenus for Roman Life Aegyptus and DLC 3.
+- Added a gold ankh menu badge and Aegyptus artwork to the mod.io cover proposals.
+- Preserved Aegyptus and cross-module Roman Life conditions.
+- Added load-order coverage for the Aegyptus base module and Roman Life Aegyptus.
+
+
 0.5.2 - 2026-10-25
 
 DEUTSCH
